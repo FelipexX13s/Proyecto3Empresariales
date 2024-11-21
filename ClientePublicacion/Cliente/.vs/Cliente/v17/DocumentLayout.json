@@ -1,0 +1,71 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\juanp\\OneDrive\\Escritorio\\Prototipo3\\ClientePublicacion\\Cliente\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{8A9F1A7D-9E78-416F-9891-75CDED958953}|Cliente\\Cliente.csproj|c:\\users\\juanp\\onedrive\\escritorio\\prototipo3\\clientepublicacion\\cliente\\cliente\\service\\serviciolibro.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8A9F1A7D-9E78-416F-9891-75CDED958953}|Cliente\\Cliente.csproj|solutionrelative:cliente\\service\\serviciolibro.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8A9F1A7D-9E78-416F-9891-75CDED958953}|Cliente\\Cliente.csproj|C:\\Users\\juanp\\OneDrive\\Escritorio\\Prototipo3\\ClientePublicacion\\Cliente\\cliente\\guiprincipal.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{8A9F1A7D-9E78-416F-9891-75CDED958953}|Cliente\\Cliente.csproj|solutionrelative:cliente\\guiprincipal.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8A9F1A7D-9E78-416F-9891-75CDED958953}|Cliente\\Cliente.csproj|C:\\Users\\juanp\\OneDrive\\Escritorio\\Prototipo3\\ClientePublicacion\\Cliente\\cliente\\guiagregar.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{8A9F1A7D-9E78-416F-9891-75CDED958953}|Cliente\\Cliente.csproj|solutionrelative:cliente\\guiagregar.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 2,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{e506b91c-c606-466a-90a9-123d1d1e12b3}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "GUIAgregar.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\juanp\\OneDrive\\Escritorio\\Prototipo3\\ClientePublicacion\\Cliente\\Cliente\\GUIAgregar.cs",
+              "RelativeDocumentMoniker": "Cliente\\GUIAgregar.cs",
+              "ToolTip": "C:\\Users\\juanp\\OneDrive\\Escritorio\\Prototipo3\\ClientePublicacion\\Cliente\\Cliente\\GUIAgregar.cs [Design]",
+              "RelativeToolTip": "Cliente\\GUIAgregar.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-07T23:24:08.122Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "ServicioLibro.cs",
+              "DocumentMoniker": "C:\\Users\\juanp\\OneDrive\\Escritorio\\Prototipo3\\ClientePublicacion\\Cliente\\Cliente\\Service\\ServicioLibro.cs",
+              "RelativeDocumentMoniker": "Cliente\\Service\\ServicioLibro.cs",
+              "ToolTip": "C:\\Users\\juanp\\OneDrive\\Escritorio\\Prototipo3\\ClientePublicacion\\Cliente\\Cliente\\Service\\ServicioLibro.cs",
+              "RelativeToolTip": "Cliente\\Service\\ServicioLibro.cs",
+              "ViewState": "AgIAADAAAAAAAAAAAAAkwEYAAAARAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-07T22:45:51.24Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "GUIPrincipal.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\juanp\\OneDrive\\Escritorio\\Prototipo3\\ClientePublicacion\\Cliente\\Cliente\\GUIPrincipal.cs",
+              "RelativeDocumentMoniker": "Cliente\\GUIPrincipal.cs",
+              "ToolTip": "C:\\Users\\juanp\\OneDrive\\Escritorio\\Prototipo3\\ClientePublicacion\\Cliente\\Cliente\\GUIPrincipal.cs [Design]",
+              "RelativeToolTip": "Cliente\\GUIPrincipal.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-07T23:24:34.054Z"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
