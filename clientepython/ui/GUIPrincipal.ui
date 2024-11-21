@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>GUIPrincipal</class>
+ <widget class="QMainWindow" name="GUIPrincipal">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>256</width>
+    <height>299</height>
+   </rect>
+  </property>
+  <property name="sizePolicy">
+   <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+    <horstretch>0</horstretch>
+    <verstretch>0</verstretch>
+   </sizepolicy>
+  </property>
+  <property name="minimumSize">
+   <size>
+    <width>256</width>
+    <height>299</height>
+   </size>
+  </property>
+  <property name="maximumSize">
+   <size>
+    <width>256</width>
+    <height>299</height>
+   </size>
+  </property>
+  <property name="windowTitle">
+   <string>Gestión de libros</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <widget class="QLabel" name="label">
+    <property name="geometry">
+     <rect>
+      <x>0</x>
+      <y>-40</y>
+      <width>281</width>
+      <height>331</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+    <property name="pixmap">
+     <pixmap>C:/Users/Juan/Downloads/imagenes sin contexto/logoPublicacion.png</pixmap>
+    </property>
+   </widget>
+  </widget>
+  <widget class="QMenuBar" name="menubar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>256</width>
+     <height>21</height>
+    </rect>
+   </property>
+   <widget class="QMenu" name="menuInicio">
+    <property name="title">
+     <string>Inicio</string>
+    </property>
+    <addaction name="actionSalir"/>
+   </widget>
+   <widget class="QMenu" name="menuLibro">
+    <property name="title">
+     <string>Libro</string>
+    </property>
+    <addaction name="actionRegistrar_libro"/>
+    <addaction name="separator"/>
+    <addaction name="actionBuscar_libro"/>
+    <addaction name="separator"/>
+    <addaction name="actionActualizar_libro"/>
+    <addaction name="separator"/>
+    <addaction name="actionEliminar_libro"/>
+    <addaction name="separator"/>
+    <addaction name="actionListar_libros"/>
+   </widget>
+   <widget class="QMenu" name="menuAutor">
+    <property name="title">
+     <string>Autor</string>
+    </property>
+    <addaction name="actionRegistrar_autor"/>
+    <addaction name="separator"/>
+    <addaction name="actionBuscar_libro_2"/>
+    <addaction name="separator"/>
+    <addaction name="actionActualizar_autor"/>
+    <addaction name="separator"/>
+    <addaction name="actionEliminar_autor"/>
+    <addaction name="separator"/>
+    <addaction name="actionListar_autores"/>
+   </widget>
+   <widget class="QMenu" name="menuAyuda">
+    <property name="title">
+     <string>Ayuda</string>
+    </property>
+    <addaction name="actionAcerca_de"/>
+   </widget>
+   <addaction name="menuInicio"/>
+   <addaction name="menuLibro"/>
+   <addaction name="menuAutor"/>
+   <addaction name="menuAyuda"/>
+  </widget>
+  <widget class="QStatusBar" name="statusbar"/>
+  <action name="actionAcerca_de">
+   <property name="text">
+    <string>Acerca de</string>
+   </property>
+  </action>
+  <action name="actionSalir">
+   <property name="text">
+    <string>Salir</string>
+   </property>
+  </action>
+  <action name="actionRegistrar_libro">
+   <property name="text">
+    <string>Registrar libro</string>
+   </property>
+  </action>
+  <action name="actionBuscar_libro">
+   <property name="text">
+    <string>Buscar libro</string>
+   </property>
+  </action>
+  <action name="actionActualizar_libro">
+   <property name="text">
+    <string>Actualizar libro</string>
+   </property>
+  </action>
+  <action name="actionEliminar_libro">
+   <property name="text">
+    <string>Eliminar libro</string>
+   </property>
+  </action>
+  <action name="actionListar_libros">
+   <property name="text">
+    <string>Listar libros</string>
+   </property>
+  </action>
+  <action name="actionRegistrar_autor">
+   <property name="text">
+    <string>Registrar autor</string>
+   </property>
+  </action>
+  <action name="actionBuscar_libro_2">
+   <property name="text">
+    <string>Buscar autor</string>
+   </property>
+  </action>
+  <action name="actionActualizar_autor">
+   <property name="text">
+    <string>Actualizar autor</string>
+   </property>
+  </action>
+  <action name="actionEliminar_autor">
+   <property name="text">
+    <string>Eliminar autor</string>
+   </property>
+  </action>
+  <action name="actionListar_autores">
+   <property name="text">
+    <string>Listar autores</string>
+   </property>
+  </action>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>

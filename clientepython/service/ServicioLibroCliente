@@ -1,0 +1,88 @@
+import requests
+from datetime import datetime
+from typing import List, Optional
+
+from model.libro import Libro
+from model.autor import Autor
+
+class ServicioLibroCliente:
+    BASE_URL = "http://localhost:8080"
+
+    def __init__(self):
+        pass
+
+    def obtener_libros(self) -> List[Libro]:
+        response = requests.get(f"{self.BASE_URL}/libros")
+        return [Libro(**libro) for libro in response.json()]
+
+    def obtener_nombres_autores(self) -> List[str]:
+        libros = self.obtener_libros()
+        return list(set(libro.autor for libro in libros))
+
+    def obtener_libros_autor(self, autor: str) -> List[Libro]:
+        response = requests.get(f"{self.BASE_URL}/libros/autor/{autor}")
+        return [Libro(**libro) for libro in response.json()]
+
+    def obtener_titulos_libros_autor(self, autor: str) -> str:
+        libros = self.obtener_libros_autor(autor)
+        return ", ".join(libro.titulo for libro in libros)
+
+    def obtener_libros_tapa_dura(self, tapa_dura: bool) -> List[Libro]:
+        response = requests.get(f"{self.BASE_URL}/libros/tapaDura/{tapa_dura}")
+        return [Libro(**libro) for libro in response.json()]
+
+    def agregar_libro(self, titulo: str, autor: str, paginas: int, 
+                      fecha: datetime, precio: float, tapa_dura: bool) -> bool:
+        fecha_iso = fecha.strftime("%Y-%m-%dT%H:%M:%S")
+        payload = {
+            "titulo": titulo,
+            "autor": autor,
+            "cantidadPaginas": paginas,
+            "fechaCreacion": fecha_iso,
+            "precio": precio,
+            "tapaDura": tapa_dura
+        }
+        response = requests.post(
+            f"{self.BASE_URL}/libros/agregar", 
+            json=payload, 
+            headers={"Content-Type": "application/json"}
+        )
+        return response.status_code == 200
+
+    def buscar_libro_por_titulo(self, titulo: str) -> Optional[Libro]:
+        response = requests.get(f"{self.BASE_URL}/libros/buscarTitulo/{titulo}")
+        return Libro(**response.json()) if response.status_code == 200 else None
+
+    def buscar_libro_por_autor(self, autor: str) -> Optional[Libro]:
+        response = requests.get(f"{self.BASE_URL}/libros/buscarAutor/{autor}")
+        return Libro(**response.json()) if response.status_code == 200 else None
+
+    def buscar_libro_completo(self, titulo: str, autor: str) -> Optional[Libro]:
+        response = requests.get(
+            f"{self.BASE_URL}/libros/buscar", 
+            params={"titulo": titulo, "autor": autor}
+        )
+        return Libro(**response.json()) if response.status_code == 200 else None
+
+    def eliminar_libro(self, titulo: str) -> bool:
+        response = requests.delete(f"{self.BASE_URL}/libros/borrar/{titulo}")
+        return response.status_code == 200
+
+    def actualizar_libro(self, titulo_antiguo: str, paginas: int, precio: float, 
+                         titulo: str, fecha: datetime, autor: str, 
+                         tapa_dura: bool) -> bool:
+        fecha_iso = fecha.strftime("%Y-%m-%dT%H:%M:%S")
+        payload = {
+            "cantidadPaginas": paginas,
+            "precio": precio,
+            "titulo": titulo,
+            "fechaCreacion": fecha_iso,
+            "autor": autor,
+            "tapaDura": tapa_dura
+        }
+        response = requests.put(
+            f"{self.BASE_URL}/libros/actualizar/{titulo_antiguo}", 
+            json=payload, 
+            headers={"Content-Type": "application/json"}
+        )
+        return response.status_code == 200

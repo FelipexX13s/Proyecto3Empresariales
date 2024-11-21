@@ -1,0 +1,11 @@
+pyuic5 -x GUIActualizarAutor.ui -o GUIActualizarAutor.py
+pyuic5 -x GUIActualizarLibro.ui -o GUIActualizarLibro.py
+pyuic5 -x GUIBuscarAutor.ui -o GUIBuscarAutor.py
+pyuic5 -x GUIBuscarLibro.ui -o GUIBuscarLibro.py
+pyuic5 -x GUIEliminarAutor.ui -o GUIEliminarAutor.py
+pyuic5 -x GUIEliminarLibro.ui -o GUIEliminarLibro.py
+pyuic5 -x GUIListarAutores.ui -o GUIListarAutores.py
+pyuic5 -x GUIListarLibros.ui -o GUIListarLibros.py
+pyuic5 -x GUIRegistrarAutor.ui -o GUIRegistrarAutor.py
+pyuic5 -x GUIRegistrarLibro.ui -o GUIRegistrarLibro.py
+pyuic5 -x GUIPrincipal.ui -o GUIPrincipal.py
