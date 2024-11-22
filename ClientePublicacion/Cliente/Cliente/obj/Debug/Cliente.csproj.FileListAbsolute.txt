@@ -203,41 +203,63 @@ C:\Users\juanp\ClienteTauri\Proyecto2Empresariales\ClientePublicacion\Cliente\Cl
 C:\Users\juanp\ClienteTauri\Proyecto2Empresariales\ClientePublicacion\Cliente\Cliente\obj\Debug\Cliente.csproj.Up2Date
 C:\Users\juanp\ClienteTauri\Proyecto2Empresariales\ClientePublicacion\Cliente\Cliente\obj\Debug\Cliente.exe
 C:\Users\juanp\ClienteTauri\Proyecto2Empresariales\ClientePublicacion\Cliente\Cliente\obj\Debug\Cliente.pdb
+D:\Mis archivos\2024\2024B\Desarrollo de Aplicaciones Empresariales\Corte2\Semana 7\Proyecto2Empresariales\ClientePublicacion\Cliente\Cliente\bin\Debug\Cliente.exe.config
+D:\Mis archivos\2024\2024B\Desarrollo de Aplicaciones Empresariales\Corte2\Semana 7\Proyecto2Empresariales\ClientePublicacion\Cliente\Cliente\bin\Debug\Cliente.exe
+D:\Mis archivos\2024\2024B\Desarrollo de Aplicaciones Empresariales\Corte2\Semana 7\Proyecto2Empresariales\ClientePublicacion\Cliente\Cliente\bin\Debug\Cliente.pdb
+D:\Mis archivos\2024\2024B\Desarrollo de Aplicaciones Empresariales\Corte2\Semana 7\Proyecto2Empresariales\ClientePublicacion\Cliente\Cliente\bin\Debug\Microsoft.Bcl.AsyncInterfaces.dll
+D:\Mis archivos\2024\2024B\Desarrollo de Aplicaciones Empresariales\Corte2\Semana 7\Proyecto2Empresariales\ClientePublicacion\Cliente\Cliente\bin\Debug\Newtonsoft.Json.dll
+D:\Mis archivos\2024\2024B\Desarrollo de Aplicaciones Empresariales\Corte2\Semana 7\Proyecto2Empresariales\ClientePublicacion\Cliente\Cliente\bin\Debug\RestSharp.dll
+D:\Mis archivos\2024\2024B\Desarrollo de Aplicaciones Empresariales\Corte2\Semana 7\Proyecto2Empresariales\ClientePublicacion\Cliente\Cliente\bin\Debug\System.Buffers.dll
+D:\Mis archivos\2024\2024B\Desarrollo de Aplicaciones Empresariales\Corte2\Semana 7\Proyecto2Empresariales\ClientePublicacion\Cliente\Cliente\bin\Debug\System.Memory.dll
+D:\Mis archivos\2024\2024B\Desarrollo de Aplicaciones Empresariales\Corte2\Semana 7\Proyecto2Empresariales\ClientePublicacion\Cliente\Cliente\bin\Debug\System.Numerics.Vectors.dll
+D:\Mis archivos\2024\2024B\Desarrollo de Aplicaciones Empresariales\Corte2\Semana 7\Proyecto2Empresariales\ClientePublicacion\Cliente\Cliente\bin\Debug\System.Runtime.CompilerServices.Unsafe.dll
+D:\Mis archivos\2024\2024B\Desarrollo de Aplicaciones Empresariales\Corte2\Semana 7\Proyecto2Empresariales\ClientePublicacion\Cliente\Cliente\bin\Debug\System.Text.Encodings.Web.dll
+D:\Mis archivos\2024\2024B\Desarrollo de Aplicaciones Empresariales\Corte2\Semana 7\Proyecto2Empresariales\ClientePublicacion\Cliente\Cliente\bin\Debug\System.Text.Json.dll
+D:\Mis archivos\2024\2024B\Desarrollo de Aplicaciones Empresariales\Corte2\Semana 7\Proyecto2Empresariales\ClientePublicacion\Cliente\Cliente\bin\Debug\System.Threading.Tasks.Extensions.dll
+D:\Mis archivos\2024\2024B\Desarrollo de Aplicaciones Empresariales\Corte2\Semana 7\Proyecto2Empresariales\ClientePublicacion\Cliente\Cliente\bin\Debug\System.ValueTuple.dll
+D:\Mis archivos\2024\2024B\Desarrollo de Aplicaciones Empresariales\Corte2\Semana 7\Proyecto2Empresariales\ClientePublicacion\Cliente\Cliente\bin\Debug\Microsoft.Bcl.AsyncInterfaces.xml
+D:\Mis archivos\2024\2024B\Desarrollo de Aplicaciones Empresariales\Corte2\Semana 7\Proyecto2Empresariales\ClientePublicacion\Cliente\Cliente\bin\Debug\Newtonsoft.Json.xml
+D:\Mis archivos\2024\2024B\Desarrollo de Aplicaciones Empresariales\Corte2\Semana 7\Proyecto2Empresariales\ClientePublicacion\Cliente\Cliente\bin\Debug\RestSharp.xml
+D:\Mis archivos\2024\2024B\Desarrollo de Aplicaciones Empresariales\Corte2\Semana 7\Proyecto2Empresariales\ClientePublicacion\Cliente\Cliente\bin\Debug\System.Buffers.xml
+D:\Mis archivos\2024\2024B\Desarrollo de Aplicaciones Empresariales\Corte2\Semana 7\Proyecto2Empresariales\ClientePublicacion\Cliente\Cliente\bin\Debug\System.Memory.xml
+D:\Mis archivos\2024\2024B\Desarrollo de Aplicaciones Empresariales\Corte2\Semana 7\Proyecto2Empresariales\ClientePublicacion\Cliente\Cliente\bin\Debug\System.Numerics.Vectors.xml
+D:\Mis archivos\2024\2024B\Desarrollo de Aplicaciones Empresariales\Corte2\Semana 7\Proyecto2Empresariales\ClientePublicacion\Cliente\Cliente\bin\Debug\System.Runtime.CompilerServices.Unsafe.xml
+D:\Mis archivos\2024\2024B\Desarrollo de Aplicaciones Empresariales\Corte2\Semana 7\Proyecto2Empresariales\ClientePublicacion\Cliente\Cliente\bin\Debug\System.Text.Encodings.Web.xml
+D:\Mis archivos\2024\2024B\Desarrollo de Aplicaciones Empresariales\Corte2\Semana 7\Proyecto2Empresariales\ClientePublicacion\Cliente\Cliente\bin\Debug\System.Text.Json.xml
+D:\Mis archivos\2024\2024B\Desarrollo de Aplicaciones Empresariales\Corte2\Semana 7\Proyecto2Empresariales\ClientePublicacion\Cliente\Cliente\bin\Debug\System.Threading.Tasks.Extensions.xml
+D:\Mis archivos\2024\2024B\Desarrollo de Aplicaciones Empresariales\Corte2\Semana 7\Proyecto2Empresariales\ClientePublicacion\Cliente\Cliente\bin\Debug\System.ValueTuple.xml
+D:\Mis archivos\2024\2024B\Desarrollo de Aplicaciones Empresariales\Corte2\Semana 7\Proyecto2Empresariales\ClientePublicacion\Cliente\Cliente\obj\Debug\Cliente.csproj.AssemblyReference.cache
+D:\Mis archivos\2024\2024B\Desarrollo de Aplicaciones Empresariales\Corte2\Semana 7\Proyecto2Empresariales\ClientePublicacion\Cliente\Cliente\obj\Debug\Cliente.GUIActualizarAutor.resources
+D:\Mis archivos\2024\2024B\Desarrollo de Aplicaciones Empresariales\Corte2\Semana 7\Proyecto2Empresariales\ClientePublicacion\Cliente\Cliente\obj\Debug\Cliente.GUIAgregarAutor.resources
+D:\Mis archivos\2024\2024B\Desarrollo de Aplicaciones Empresariales\Corte2\Semana 7\Proyecto2Empresariales\ClientePublicacion\Cliente\Cliente\obj\Debug\Cliente.GUIBuscarAutor.resources
+D:\Mis archivos\2024\2024B\Desarrollo de Aplicaciones Empresariales\Corte2\Semana 7\Proyecto2Empresariales\ClientePublicacion\Cliente\Cliente\obj\Debug\Cliente.GUIEliminarAutor.resources
+D:\Mis archivos\2024\2024B\Desarrollo de Aplicaciones Empresariales\Corte2\Semana 7\Proyecto2Empresariales\ClientePublicacion\Cliente\Cliente\obj\Debug\Cliente.GUIListar.resources
+D:\Mis archivos\2024\2024B\Desarrollo de Aplicaciones Empresariales\Corte2\Semana 7\Proyecto2Empresariales\ClientePublicacion\Cliente\Cliente\obj\Debug\Cliente.GUIEliminar.resources
+D:\Mis archivos\2024\2024B\Desarrollo de Aplicaciones Empresariales\Corte2\Semana 7\Proyecto2Empresariales\ClientePublicacion\Cliente\Cliente\obj\Debug\Cliente.GUIActualizar.resources
+D:\Mis archivos\2024\2024B\Desarrollo de Aplicaciones Empresariales\Corte2\Semana 7\Proyecto2Empresariales\ClientePublicacion\Cliente\Cliente\obj\Debug\Cliente.GUIBuscar.resources
+D:\Mis archivos\2024\2024B\Desarrollo de Aplicaciones Empresariales\Corte2\Semana 7\Proyecto2Empresariales\ClientePublicacion\Cliente\Cliente\obj\Debug\Cliente.GUIAgregar.resources
+D:\Mis archivos\2024\2024B\Desarrollo de Aplicaciones Empresariales\Corte2\Semana 7\Proyecto2Empresariales\ClientePublicacion\Cliente\Cliente\obj\Debug\Cliente.GUIListarAutores.resources
+D:\Mis archivos\2024\2024B\Desarrollo de Aplicaciones Empresariales\Corte2\Semana 7\Proyecto2Empresariales\ClientePublicacion\Cliente\Cliente\obj\Debug\Cliente.GUIPrincipal.resources
+D:\Mis archivos\2024\2024B\Desarrollo de Aplicaciones Empresariales\Corte2\Semana 7\Proyecto2Empresariales\ClientePublicacion\Cliente\Cliente\obj\Debug\Cliente.Properties.Resources.resources
+D:\Mis archivos\2024\2024B\Desarrollo de Aplicaciones Empresariales\Corte2\Semana 7\Proyecto2Empresariales\ClientePublicacion\Cliente\Cliente\obj\Debug\Cliente.csproj.GenerateResource.cache
+D:\Mis archivos\2024\2024B\Desarrollo de Aplicaciones Empresariales\Corte2\Semana 7\Proyecto2Empresariales\ClientePublicacion\Cliente\Cliente\obj\Debug\Cliente.csproj.CoreCompileInputs.cache
+D:\Mis archivos\2024\2024B\Desarrollo de Aplicaciones Empresariales\Corte2\Semana 7\Proyecto2Empresariales\ClientePublicacion\Cliente\Cliente\obj\Debug\Cliente.csproj.Up2Date
+D:\Mis archivos\2024\2024B\Desarrollo de Aplicaciones Empresariales\Corte2\Semana 7\Proyecto2Empresariales\ClientePublicacion\Cliente\Cliente\obj\Debug\Cliente.exe
+D:\Mis archivos\2024\2024B\Desarrollo de Aplicaciones Empresariales\Corte2\Semana 7\Proyecto2Empresariales\ClientePublicacion\Cliente\Cliente\obj\Debug\Cliente.pdb
 C:\Users\juanp\OneDrive\Escritorio\Prototipo3\ClientePublicacion\Cliente\Cliente\obj\Debug\Cliente.csproj.AssemblyReference.cache
-C:\Users\juanp\OneDrive\Escritorio\Prototipo3\ClientePublicacion\Cliente\Cliente\obj\Debug\Cliente.exe
-C:\Users\juanp\OneDrive\Escritorio\Prototipo3\ClientePublicacion\Cliente\Cliente\obj\Debug\Cliente.pdb
+C:\Users\juanp\OneDrive\Escritorio\Prototipo3\ClientePublicacion\Cliente\Cliente\obj\Debug\Cliente.GUIActualizarAutor.resources
+C:\Users\juanp\OneDrive\Escritorio\Prototipo3\ClientePublicacion\Cliente\Cliente\obj\Debug\Cliente.GUIAgregarAutor.resources
+C:\Users\juanp\OneDrive\Escritorio\Prototipo3\ClientePublicacion\Cliente\Cliente\obj\Debug\Cliente.GUIBuscarAutor.resources
+C:\Users\juanp\OneDrive\Escritorio\Prototipo3\ClientePublicacion\Cliente\Cliente\obj\Debug\Cliente.GUIEliminarAutor.resources
 C:\Users\juanp\OneDrive\Escritorio\Prototipo3\ClientePublicacion\Cliente\Cliente\obj\Debug\Cliente.GUIListar.resources
 C:\Users\juanp\OneDrive\Escritorio\Prototipo3\ClientePublicacion\Cliente\Cliente\obj\Debug\Cliente.GUIEliminar.resources
 C:\Users\juanp\OneDrive\Escritorio\Prototipo3\ClientePublicacion\Cliente\Cliente\obj\Debug\Cliente.GUIActualizar.resources
 C:\Users\juanp\OneDrive\Escritorio\Prototipo3\ClientePublicacion\Cliente\Cliente\obj\Debug\Cliente.GUIBuscar.resources
 C:\Users\juanp\OneDrive\Escritorio\Prototipo3\ClientePublicacion\Cliente\Cliente\obj\Debug\Cliente.GUIAgregar.resources
+C:\Users\juanp\OneDrive\Escritorio\Prototipo3\ClientePublicacion\Cliente\Cliente\obj\Debug\Cliente.GUIListarAutores.resources
 C:\Users\juanp\OneDrive\Escritorio\Prototipo3\ClientePublicacion\Cliente\Cliente\obj\Debug\Cliente.GUIPrincipal.resources
 C:\Users\juanp\OneDrive\Escritorio\Prototipo3\ClientePublicacion\Cliente\Cliente\obj\Debug\Cliente.Properties.Resources.resources
 C:\Users\juanp\OneDrive\Escritorio\Prototipo3\ClientePublicacion\Cliente\Cliente\obj\Debug\Cliente.csproj.GenerateResource.cache
 C:\Users\juanp\OneDrive\Escritorio\Prototipo3\ClientePublicacion\Cliente\Cliente\obj\Debug\Cliente.csproj.CoreCompileInputs.cache
-C:\Users\juanp\OneDrive\Escritorio\Prototipo3\ClientePublicacion\Cliente\Cliente\bin\Debug\Cliente.exe.config
-C:\Users\juanp\OneDrive\Escritorio\Prototipo3\ClientePublicacion\Cliente\Cliente\bin\Debug\Cliente.exe
-C:\Users\juanp\OneDrive\Escritorio\Prototipo3\ClientePublicacion\Cliente\Cliente\bin\Debug\Cliente.pdb
-C:\Users\juanp\OneDrive\Escritorio\Prototipo3\ClientePublicacion\Cliente\Cliente\bin\Debug\Microsoft.Bcl.AsyncInterfaces.dll
-C:\Users\juanp\OneDrive\Escritorio\Prototipo3\ClientePublicacion\Cliente\Cliente\bin\Debug\Newtonsoft.Json.dll
-C:\Users\juanp\OneDrive\Escritorio\Prototipo3\ClientePublicacion\Cliente\Cliente\bin\Debug\RestSharp.dll
-C:\Users\juanp\OneDrive\Escritorio\Prototipo3\ClientePublicacion\Cliente\Cliente\bin\Debug\System.Buffers.dll
-C:\Users\juanp\OneDrive\Escritorio\Prototipo3\ClientePublicacion\Cliente\Cliente\bin\Debug\System.Memory.dll
-C:\Users\juanp\OneDrive\Escritorio\Prototipo3\ClientePublicacion\Cliente\Cliente\bin\Debug\System.Numerics.Vectors.dll
-C:\Users\juanp\OneDrive\Escritorio\Prototipo3\ClientePublicacion\Cliente\Cliente\bin\Debug\System.Runtime.CompilerServices.Unsafe.dll
-C:\Users\juanp\OneDrive\Escritorio\Prototipo3\ClientePublicacion\Cliente\Cliente\bin\Debug\System.Text.Encodings.Web.dll
-C:\Users\juanp\OneDrive\Escritorio\Prototipo3\ClientePublicacion\Cliente\Cliente\bin\Debug\System.Text.Json.dll
-C:\Users\juanp\OneDrive\Escritorio\Prototipo3\ClientePublicacion\Cliente\Cliente\bin\Debug\System.Threading.Tasks.Extensions.dll
-C:\Users\juanp\OneDrive\Escritorio\Prototipo3\ClientePublicacion\Cliente\Cliente\bin\Debug\System.ValueTuple.dll
-C:\Users\juanp\OneDrive\Escritorio\Prototipo3\ClientePublicacion\Cliente\Cliente\bin\Debug\Microsoft.Bcl.AsyncInterfaces.xml
-C:\Users\juanp\OneDrive\Escritorio\Prototipo3\ClientePublicacion\Cliente\Cliente\bin\Debug\Newtonsoft.Json.xml
-C:\Users\juanp\OneDrive\Escritorio\Prototipo3\ClientePublicacion\Cliente\Cliente\bin\Debug\RestSharp.xml
-C:\Users\juanp\OneDrive\Escritorio\Prototipo3\ClientePublicacion\Cliente\Cliente\bin\Debug\System.Buffers.xml
-C:\Users\juanp\OneDrive\Escritorio\Prototipo3\ClientePublicacion\Cliente\Cliente\bin\Debug\System.Memory.xml
-C:\Users\juanp\OneDrive\Escritorio\Prototipo3\ClientePublicacion\Cliente\Cliente\bin\Debug\System.Numerics.Vectors.xml
-C:\Users\juanp\OneDrive\Escritorio\Prototipo3\ClientePublicacion\Cliente\Cliente\bin\Debug\System.Runtime.CompilerServices.Unsafe.xml
-C:\Users\juanp\OneDrive\Escritorio\Prototipo3\ClientePublicacion\Cliente\Cliente\bin\Debug\System.Text.Encodings.Web.xml
-C:\Users\juanp\OneDrive\Escritorio\Prototipo3\ClientePublicacion\Cliente\Cliente\bin\Debug\System.Text.Json.xml
-C:\Users\juanp\OneDrive\Escritorio\Prototipo3\ClientePublicacion\Cliente\Cliente\bin\Debug\System.Threading.Tasks.Extensions.xml
-C:\Users\juanp\OneDrive\Escritorio\Prototipo3\ClientePublicacion\Cliente\Cliente\bin\Debug\System.ValueTuple.xml
-C:\Users\juanp\OneDrive\Escritorio\Prototipo3\ClientePublicacion\Cliente\Cliente\obj\Debug\Cliente.csproj.Up2Date
+C:\Users\juanp\OneDrive\Escritorio\Prototipo3\ClientePublicacion\Cliente\Cliente\obj\Debug\Cliente.exe
+C:\Users\juanp\OneDrive\Escritorio\Prototipo3\ClientePublicacion\Cliente\Cliente\obj\Debug\Cliente.pdb

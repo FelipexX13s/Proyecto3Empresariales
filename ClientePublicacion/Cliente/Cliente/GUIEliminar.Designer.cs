@@ -35,7 +35,7 @@
             this.lblFechaCreacion = new System.Windows.Forms.Label();
             this.lblPrecio = new System.Windows.Forms.Label();
             this.txtTitulo = new System.Windows.Forms.TextBox();
-            this.txtAutores = new System.Windows.Forms.TextBox();
+            this.txtAutor = new System.Windows.Forms.TextBox();
             this.txtPaginas = new System.Windows.Forms.TextBox();
             this.txtPrecio = new System.Windows.Forms.TextBox();
             this.btnBuscar = new System.Windows.Forms.Button();
@@ -53,7 +53,7 @@
             this.lblEliminarLibro.Font = new System.Drawing.Font("Arial Rounded MT Bold", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblEliminarLibro.Location = new System.Drawing.Point(12, 9);
             this.lblEliminarLibro.Name = "lblEliminarLibro";
-            this.lblEliminarLibro.Size = new System.Drawing.Size(219, 34);
+            this.lblEliminarLibro.Size = new System.Drawing.Size(176, 28);
             this.lblEliminarLibro.TabIndex = 0;
             this.lblEliminarLibro.Text = "Eliminar Libro";
             // 
@@ -63,7 +63,7 @@
             this.lblTitulo.Font = new System.Drawing.Font("Arial Rounded MT Bold", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblTitulo.Location = new System.Drawing.Point(14, 155);
             this.lblTitulo.Name = "lblTitulo";
-            this.lblTitulo.Size = new System.Drawing.Size(64, 23);
+            this.lblTitulo.Size = new System.Drawing.Size(52, 18);
             this.lblTitulo.TabIndex = 1;
             this.lblTitulo.Text = "Título";
             // 
@@ -73,10 +73,9 @@
             this.lblAutor.Font = new System.Drawing.Font("Arial Rounded MT Bold", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblAutor.Location = new System.Drawing.Point(14, 184);
             this.lblAutor.Name = "lblAutor";
-            this.lblAutor.Size = new System.Drawing.Size(64, 23);
+            this.lblAutor.Size = new System.Drawing.Size(53, 18);
             this.lblAutor.TabIndex = 2;
             this.lblAutor.Text = "Autor";
-            this.lblAutor.Click += new System.EventHandler(this.lblAutor_Click);
             // 
             // lblCantidadPaginas
             // 
@@ -84,7 +83,7 @@
             this.lblCantidadPaginas.Font = new System.Drawing.Font("Arial Rounded MT Bold", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblCantidadPaginas.Location = new System.Drawing.Point(14, 217);
             this.lblCantidadPaginas.Name = "lblCantidadPaginas";
-            this.lblCantidadPaginas.Size = new System.Drawing.Size(126, 23);
+            this.lblCantidadPaginas.Size = new System.Drawing.Size(102, 18);
             this.lblCantidadPaginas.TabIndex = 3;
             this.lblCantidadPaginas.Text = "No. páginas";
             this.lblCantidadPaginas.Click += new System.EventHandler(this.lblCantidadPaginas_Click);
@@ -95,7 +94,7 @@
             this.lblFechaCreacion.Font = new System.Drawing.Font("Arial Rounded MT Bold", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblFechaCreacion.Location = new System.Drawing.Point(14, 247);
             this.lblFechaCreacion.Name = "lblFechaCreacion";
-            this.lblFechaCreacion.Size = new System.Drawing.Size(70, 23);
+            this.lblFechaCreacion.Size = new System.Drawing.Size(58, 18);
             this.lblFechaCreacion.TabIndex = 4;
             this.lblFechaCreacion.Text = "Fecha";
             // 
@@ -105,30 +104,30 @@
             this.lblPrecio.Font = new System.Drawing.Font("Arial Rounded MT Bold", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblPrecio.Location = new System.Drawing.Point(14, 275);
             this.lblPrecio.Name = "lblPrecio";
-            this.lblPrecio.Size = new System.Drawing.Size(73, 23);
+            this.lblPrecio.Size = new System.Drawing.Size(60, 18);
             this.lblPrecio.TabIndex = 5;
             this.lblPrecio.Text = "Precio";
             // 
             // txtTitulo
             // 
             this.txtTitulo.Enabled = false;
-            this.txtTitulo.Location = new System.Drawing.Point(153, 155);
+            this.txtTitulo.Location = new System.Drawing.Point(126, 155);
             this.txtTitulo.Name = "txtTitulo";
             this.txtTitulo.Size = new System.Drawing.Size(200, 20);
             this.txtTitulo.TabIndex = 6;
             // 
-            // txtAutores
+            // txtAutor
             // 
-            this.txtAutores.Enabled = false;
-            this.txtAutores.Location = new System.Drawing.Point(153, 184);
-            this.txtAutores.Name = "txtAutores";
-            this.txtAutores.Size = new System.Drawing.Size(200, 20);
-            this.txtAutores.TabIndex = 7;
+            this.txtAutor.Enabled = false;
+            this.txtAutor.Location = new System.Drawing.Point(126, 184);
+            this.txtAutor.Name = "txtAutor";
+            this.txtAutor.Size = new System.Drawing.Size(200, 20);
+            this.txtAutor.TabIndex = 7;
             // 
             // txtPaginas
             // 
             this.txtPaginas.Enabled = false;
-            this.txtPaginas.Location = new System.Drawing.Point(153, 217);
+            this.txtPaginas.Location = new System.Drawing.Point(126, 217);
             this.txtPaginas.Name = "txtPaginas";
             this.txtPaginas.Size = new System.Drawing.Size(200, 20);
             this.txtPaginas.TabIndex = 8;
@@ -136,7 +135,7 @@
             // txtPrecio
             // 
             this.txtPrecio.Enabled = false;
-            this.txtPrecio.Location = new System.Drawing.Point(153, 275);
+            this.txtPrecio.Location = new System.Drawing.Point(126, 275);
             this.txtPrecio.Name = "txtPrecio";
             this.txtPrecio.Size = new System.Drawing.Size(200, 20);
             this.txtPrecio.TabIndex = 10;
@@ -155,7 +154,7 @@
             // dpFecha
             // 
             this.dpFecha.Enabled = false;
-            this.dpFecha.Location = new System.Drawing.Point(153, 249);
+            this.dpFecha.Location = new System.Drawing.Point(126, 249);
             this.dpFecha.Name = "dpFecha";
             this.dpFecha.Size = new System.Drawing.Size(200, 20);
             this.dpFecha.TabIndex = 12;
@@ -170,7 +169,7 @@
             // btnEliminar
             // 
             this.btnEliminar.Font = new System.Drawing.Font("Arial Rounded MT Bold", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnEliminar.Location = new System.Drawing.Point(253, 323);
+            this.btnEliminar.Location = new System.Drawing.Point(226, 323);
             this.btnEliminar.Name = "btnEliminar";
             this.btnEliminar.Size = new System.Drawing.Size(100, 28);
             this.btnEliminar.TabIndex = 14;
@@ -185,7 +184,7 @@
             this.label1.Font = new System.Drawing.Font("Arial Rounded MT Bold", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(14, 48);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(155, 23);
+            this.label1.Size = new System.Drawing.Size(127, 18);
             this.label1.TabIndex = 15;
             this.label1.Text = "Titulo Buscado";
             this.label1.Click += new System.EventHandler(this.label1_Click);
@@ -196,7 +195,7 @@
             this.label2.Font = new System.Drawing.Font("Arial Rounded MT Bold", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.Location = new System.Drawing.Point(12, 116);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(270, 34);
+            this.label2.Size = new System.Drawing.Size(218, 28);
             this.label2.TabIndex = 16;
             this.label2.Text = "Libro a eliminar...";
             // 
@@ -207,7 +206,7 @@
             this.chxTapaDura.Location = new System.Drawing.Point(17, 298);
             this.chxTapaDura.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.chxTapaDura.Name = "chxTapaDura";
-            this.chxTapaDura.Size = new System.Drawing.Size(186, 27);
+            this.chxTapaDura.Size = new System.Drawing.Size(152, 22);
             this.chxTapaDura.TabIndex = 17;
             this.chxTapaDura.Text = "Tiene tapa dura";
             this.chxTapaDura.UseVisualStyleBackColor = true;
@@ -216,7 +215,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(365, 365);
+            this.ClientSize = new System.Drawing.Size(339, 365);
             this.Controls.Add(this.chxTapaDura);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
@@ -226,7 +225,7 @@
             this.Controls.Add(this.btnBuscar);
             this.Controls.Add(this.txtPrecio);
             this.Controls.Add(this.txtPaginas);
-            this.Controls.Add(this.txtAutores);
+            this.Controls.Add(this.txtAutor);
             this.Controls.Add(this.txtTitulo);
             this.Controls.Add(this.lblPrecio);
             this.Controls.Add(this.lblFechaCreacion);
@@ -255,7 +254,7 @@
         private System.Windows.Forms.Label lblFechaCreacion;
         private System.Windows.Forms.Label lblPrecio;
         private System.Windows.Forms.TextBox txtTitulo;
-        private System.Windows.Forms.TextBox txtAutores;
+        private System.Windows.Forms.TextBox txtAutor;
         private System.Windows.Forms.TextBox txtPaginas;
         private System.Windows.Forms.TextBox txtPrecio;
         private System.Windows.Forms.Button btnBuscar;

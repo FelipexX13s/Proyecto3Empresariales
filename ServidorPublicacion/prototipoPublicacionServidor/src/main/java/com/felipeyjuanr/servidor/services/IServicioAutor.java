@@ -13,12 +13,12 @@ public interface IServicioAutor {
 
     public List  getAutoresNacionalidad(String nacionalidad);
 
-    public boolean agregarAutor(String nombre, int edad, String nacionalidad, double regalias, LocalDateTime fechaNacimiento);
+    public boolean agregarAutor(String nombre, int edad, String nacionalidad, double regalias, LocalDateTime fechaNacimiento, List<Libro> libros);
 
     public Autor buscarAutor(String nombre);
 
-    public boolean eliminarLibro(String nombre);
+    public boolean eliminarAutor(String nombre);
 
-    public boolean actualizarLibro(String nombreAntiguo, String nombre, int edad, String nacionalidad, double regalias, LocalDateTime fechaNacimiento);
+    public boolean actualizarAutor(String nombreAntiguo, String nombre, int edad, String nacionalidad, double regalias, LocalDateTime fechaNacimiento, List<Libro> libros);
 }
 

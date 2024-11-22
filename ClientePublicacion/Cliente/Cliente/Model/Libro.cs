@@ -15,7 +15,7 @@ namespace Cliente.Model
         public double Precio { get; set; }
         public bool TapaDura { get; set; }
 
-        public Libro(string titulo, string autor, int cantidadPaginas, DateTime fechaCreacion, double precio, bool tapaDura)
+        public Libro(string titulo, String autor, int cantidadPaginas, DateTime fechaCreacion, double precio, bool tapaDura)
         {
             Titulo = titulo;
             Autor = autor;

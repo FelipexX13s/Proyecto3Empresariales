@@ -16,9 +16,11 @@ namespace Cliente.Service
     {
         private const string BaseUrl = "http://localhost:8080";
 
+        private ServicioLibroCliente servicioLibroCliente;
+
         public ServicioLibroCliente()
         {
-
+            servicioLibroCliente = new ServicioLibroCliente();
         }
 
         public List<Libro> ObtenerLibros()
@@ -32,11 +34,32 @@ namespace Cliente.Service
             return JsonConvert.DeserializeObject<List<Libro>>(response.Content);
         }
 
+        public List<string> ObtenerNombresAutores()
+        {
+            return servicioLibroCliente.ObtenerNombresAutores();
+        }
+
         public List<Libro> ObtenerLibrosAutor(String autor)
         {
             var options = new RestClientOptions(BaseUrl);
             var client = new RestClient(options);
             var request = new RestRequest("/libros/autor/"+autor, Method.Get);
+
+            var response = client.Execute(request);
+
+            return JsonConvert.DeserializeObject<List<Libro>>(response.Content);
+        }
+
+        public String ObtenerTitulosLibrosAutor(String autor)
+        {
+            return ObtenerLibrosAutor(autor).ToString();
+        }
+
+        public List<Libro> ObtenerLibrosTapaDura(bool tapaDura)
+        {
+            var options = new RestClientOptions(BaseUrl);
+            var client = new RestClient(options);
+            var request = new RestRequest("/libros/tapa/" + tapaDura, Method.Get);
 
             var response = client.Execute(request);
 
@@ -53,16 +76,18 @@ namespace Cliente.Service
             request.AddHeader("Content-Type", "application/json");
             var fechaISO = fecha.ToString("yyyy-MM-ddTHH:mm:ss");
 
-            if(autorx=="")
+            if(autorx == null)
             {
                 var body = new
                 {
                     titulo = titulox,
+                    
                     cantidadPaginas = paginas,
                     fechaCreacion = fechaISO,
                     precio = preciox,
                     tapaDura = tapaDurax
                 };
+
                 request.AddBody(body);
             }
             else
@@ -76,10 +101,10 @@ namespace Cliente.Service
                     precio = preciox,
                     tapaDura = tapaDurax
                 };
+
                 request.AddBody(body);
             }
             
-          
 
             var response = client.Execute(request);
 

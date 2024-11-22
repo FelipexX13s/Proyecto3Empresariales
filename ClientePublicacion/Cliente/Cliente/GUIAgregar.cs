@@ -15,11 +15,16 @@ namespace Cliente
     public partial class GUIAgregar : Form
     {
         private ServicioLibroCliente servicioLibro;
+        private ServicioAutor servicioAutor;
         private List<string> autores;
         public GUIAgregar()
         {
             servicioLibro = new ServicioLibroCliente();
+            servicioAutor = new ServicioAutor();
             InitializeComponent();
+            cbxAutores.DataSource = servicioLibro.ObtenerNombresAutores();
+            cbxAutores.DisplayMember = "Nombre";
+            autores = new List<string>();
         }
 
         private void lblCantidadPaginas_Click(object sender, EventArgs e)
@@ -64,7 +69,12 @@ namespace Cliente
 
                 DateTime fecha = dpFecha.Value;
 
-                var autor = txtAutores.Text.Trim();
+                var autor = cbxAutores.SelectedItem.ToString().Trim();
+                if (string.IsNullOrEmpty(autor))
+                {
+                    MessageBox.Show("El autor no puede estar vacío.", "Error de entrada", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return;
+                }
 
                 bool tapaDura = chxTapaDura.Checked;
 
@@ -91,16 +101,11 @@ namespace Cliente
             txtPrecio.Text = "";
             txtTitulo.Text = "";
             dpFecha.Value = DateTime.Now;
-            txtAutores.Text = "";
             chxTapaDura.Checked = false;
+            autores = new List<string>();
         }
 
         private void lblAutor_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label1_Click(object sender, EventArgs e)
         {
 
         }
@@ -110,9 +115,7 @@ namespace Cliente
 
         }
 
-
-
-        private void lblAgregarLibro_Click(object sender, EventArgs e)
+        private void txtAutor_TextChanged(object sender, EventArgs e)
         {
 
         }

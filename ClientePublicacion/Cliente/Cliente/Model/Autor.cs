@@ -12,11 +12,16 @@ namespace Cliente.Model
         public int Edad { get; set; }
         public string Nacionalidad { get; set; }
 
-        public Autor(string nombre, int edad, string nacionalidad)
+        public double PorcentajeRegalias { get; set; }
+        public DateTime FechaNacimiento { get; set; }
+
+        public Autor(string nombre, int edad, string nacionalidad, double porcentajeRegalias, DateTime fechaNacimiento)
         {
             Nombre = nombre;
             Edad = edad;
             Nacionalidad = nacionalidad;
+            PorcentajeRegalias = porcentajeRegalias;
+            FechaNacimiento = fechaNacimiento;
         }
     }
 }

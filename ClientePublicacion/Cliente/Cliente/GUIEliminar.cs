@@ -51,7 +51,7 @@ namespace Cliente
             if (libroEncontrado != null)
             {
                 txtTitulo.Text = libroEncontrado.Titulo;
-                txtAutores.Text = libroEncontrado.Autor;
+                txtAutor.Text = libroEncontrado.Autor;
                 txtPaginas.Text = libroEncontrado.CantidadPaginas.ToString();
                 dpFecha.Value = libroEncontrado.FechaCreacion;
                 txtPrecio.Text = libroEncontrado.Precio.ToString();
@@ -103,16 +103,11 @@ namespace Cliente
         {
             txtBuscar.Text = "";
             txtTitulo.Text = "";
-            txtAutores.Text = "";
+            txtAutor.Text = "";
             txtPaginas.Text = "";
             dpFecha.Value = DateTime.Now;
             txtPrecio.Text = "";
             chxTapaDura.Checked = false;
-        }
-
-        private void lblAutor_Click(object sender, EventArgs e)
-        {
-
         }
     }
 }

@@ -2,6 +2,7 @@ package com.felipeyjuanr.servidor.services;
 
 import com.felipeyjuanr.servidor.model.Autor;
 import com.felipeyjuanr.servidor.model.Libro;
+import com.felipeyjuanr.servidor.repositories.AutorRepository;
 import com.felipeyjuanr.servidor.repositories.LibroRepository;
 import jakarta.transaction.Transactional;
 import lombok.RequiredArgsConstructor;
@@ -15,8 +16,13 @@ import java.util.Optional;
 @Service
 @RequiredArgsConstructor
 public class ServicioLibro implements IServicioLibro {
+
+
     @Autowired
     private LibroRepository librosRepo;
+
+    @Autowired
+    private AutorRepository autorRepo;
 
     @Override
     public List<Libro> getLibros() {
@@ -37,15 +43,10 @@ public class ServicioLibro implements IServicioLibro {
     @Transactional
     public boolean agregarLibro(String titulo, Autor autor, int cantidadPaginas,
                                 LocalDateTime fechaCreacion, double precio, boolean tapaDura) {
-        // Verifica si ya existe un libro con el mismo título
-
-        System.out.println("CAL librosRepo: " + librosRepo);
-
         if (librosRepo.buscarTitulo(titulo).isPresent()) {
             return false;
         }
 
-        // Crea y guarda un nuevo libro usando el repositorio
         Libro nuevoLibro = Libro.builder()
                 .titulo(titulo)
                 .autor(autor)
@@ -55,7 +56,12 @@ public class ServicioLibro implements IServicioLibro {
                 .tapaDura(tapaDura)
                 .build();
 
+        // Guardar libro y actualizar lista de libros del autor
         librosRepo.save(nuevoLibro);
+        if (autor != null) {
+            autor.getLibros().add(nuevoLibro);
+            autorRepo.save(autor);
+        }
         return true;
     }
 
@@ -78,9 +84,19 @@ public class ServicioLibro implements IServicioLibro {
     @Override
     @Transactional
     public boolean eliminarLibro(String titulo) {
-        Optional<Libro> libro = librosRepo.buscarTitulo(titulo);
-        if (libro.isPresent()) {
-            librosRepo.delete(libro.get());
+        Optional<Libro> libroOptional = librosRepo.buscarTitulo(titulo);
+        if (libroOptional.isPresent()) {
+            Libro libro = libroOptional.get();
+
+            // Quitar libro de la lista del autor
+            if (libro.getAutor() != null) {
+                Autor autor = libro.getAutor();
+                autor.getLibros().remove(libro);
+                autorRepo.save(autor);
+            }
+
+            // Eliminar libro
+            librosRepo.delete(libro);
             return true;
         }
         return false;
@@ -88,21 +104,38 @@ public class ServicioLibro implements IServicioLibro {
 
     @Override
     @Transactional
-    public boolean actualizarLibro(String tituloAntiguo, String titulo, Autor autor,
+    public boolean actualizarLibro(String tituloAntiguo, String titulo, Autor autorNuevo,
                                    int cantidadPaginas, LocalDateTime fechaCreacion,
                                    double precio, boolean tapaDura) {
         Optional<Libro> libroExistente = librosRepo.buscarTitulo(tituloAntiguo);
         if (libroExistente.isPresent()) {
             Libro libro = libroExistente.get();
+
+            // Quitar libro del autor anterior
+            if (libro.getAutor() != null) {
+                Autor autorAntiguo = libro.getAutor();
+                autorAntiguo.getLibros().remove(libro);
+                autorRepo.save(autorAntiguo);
+            }
+
+            // Actualizar libro con nuevo autor
             libro.setTitulo(titulo);
-            libro.setAutor(autor);
+            libro.setAutor(autorNuevo);
             libro.setCantidadPaginas(cantidadPaginas);
             libro.setFechaCreacion(fechaCreacion);
             libro.setPrecio(precio);
             libro.setTapaDura(tapaDura);
             librosRepo.save(libro);
+
+            // Agregar libro al nuevo autor
+            if (autorNuevo != null) {
+                autorNuevo.getLibros().add(libro);
+                autorRepo.save(autorNuevo);
+            }
+
             return true;
         }
         return false;
     }
+
 }

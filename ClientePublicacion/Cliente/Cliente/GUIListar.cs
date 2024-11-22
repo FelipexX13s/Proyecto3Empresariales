@@ -41,7 +41,7 @@ namespace Cliente
                 var librosVista = libros.Select(l => new LibroVista
                 {
                     Titulo = l.Titulo,
-                    Autores = string.Join(", ", l.Autor),
+                    Autores = string.Join(", ", l.Autores),
                     CantidadPaginas = l.CantidadPaginas,
                     FechaCreacion = l.FechaCreacion,
                     Precio = l.Precio,
@@ -66,7 +66,7 @@ namespace Cliente
                 var librosVista = libros.Select(l => new LibroVista
                 {
                     Titulo = l.Titulo,
-                    Autores = l.Autor,
+                    Autores = l.Autores.ToString(),
                     CantidadPaginas = l.CantidadPaginas,
                     FechaCreacion = l.FechaCreacion,
                     Precio = l.Precio,
@@ -87,9 +87,28 @@ namespace Cliente
 
         }
 
-        private void lblBuscarLibro_Click(object sender, EventArgs e)
+        private void button1_Click_1(object sender, EventArgs e)
         {
+            try
+            {
+                libros = servicioLibro.ObtenerLibrosTapaDura(chxTapaDura.Checked);
 
+                var librosVista = libros.Select(l => new LibroVista
+                {
+                    Titulo = l.Titulo,
+                    Autores = l.Autores.ToString(),
+                    CantidadPaginas = l.CantidadPaginas,
+                    FechaCreacion = l.FechaCreacion,
+                    Precio = l.Precio,
+                    TapaDura = l.TapaDura
+                }).ToList();
+
+                dataGridView1.DataSource = librosVista;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Error al cargar libros: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
     }
 }

@@ -15,6 +15,7 @@ namespace Cliente
     public partial class GUIActualizar : Form
     {
         private ServicioLibroCliente servicioLibro;
+        private ServicioAutor servicioAutor;
         private Libro libroEncontrado;
         private string tituloOriginal;
 
@@ -23,6 +24,7 @@ namespace Cliente
             InitializeComponent();
             this.ActiveControl = txtBuscar;
             servicioLibro = new ServicioLibroCliente();
+            servicioAutor = new ServicioAutor();
             libroEncontrado = null;
         }
 
@@ -44,13 +46,14 @@ namespace Cliente
 
             if (libroEncontrado != null)
             {
+                cbxAutores.DataSource = servicioLibro.ObtenerNombresAutores();
+                cbxAutores.SelectedItem = libroEncontrado.Autor;
+
                 tituloOriginal = libroEncontrado.Titulo;
                 txtTitulo.Text = libroEncontrado.Titulo;
-                txtAutores.Text = libroEncontrado.Autor;
                 txtPaginas.Text = libroEncontrado.CantidadPaginas.ToString();
                 dpFecha.Value = libroEncontrado.FechaCreacion;
                 txtPrecio.Text = libroEncontrado.Precio.ToString();
-   
                 MessageBox.Show("Libro encontrado. Puede modificar los campos y luego presionar 'Actualizar'.", "Éxito", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
             else
@@ -79,10 +82,10 @@ namespace Cliente
                 double precio = double.Parse(txtPrecio.Text);
                 string nuevoTitulo = txtTitulo.Text.Trim();
                 DateTime fecha = dpFecha.Value;
-                string autores = txtAutores.Text.Trim();
+                string autor = cbxAutores.SelectedItem.ToString().Trim();
                 bool tapaDura = checkBox1.Checked;
 
-                bool actualizado = servicioLibro.ActualizarLibro(tituloOriginal, paginas, precio, nuevoTitulo, fecha, autores, tapaDura);
+                bool actualizado = servicioLibro.ActualizarLibro(tituloOriginal, paginas, precio, nuevoTitulo, fecha, autor, tapaDura);
 
                 if (actualizado)
                 {
@@ -108,7 +111,6 @@ namespace Cliente
         private bool ValidarCampos()
         {
             if (string.IsNullOrWhiteSpace(txtTitulo.Text) ||
-                string.IsNullOrWhiteSpace(txtAutores.Text) ||
                 string.IsNullOrWhiteSpace(txtPaginas.Text) ||
                 string.IsNullOrWhiteSpace(txtPrecio.Text))
             {
@@ -122,7 +124,7 @@ namespace Cliente
         {
             txtBuscar.Text = "";
             txtTitulo.Text = "";
-            txtAutores.Text = "";
+            txtAutor.Text = "";
             txtPaginas.Text = "";
             dpFecha.Value = DateTime.Now;
             txtPrecio.Text = "";
@@ -139,8 +141,32 @@ namespace Cliente
 
         }
 
+        private void GUIActualizar_Load(object sender, EventArgs e)
+        {
 
-        private void lblBuscarLibro_Click(object sender, EventArgs e)
+        }
+
+        private void lblFechaCreacion_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void lblPrecio_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void checkBox1_CheckedChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtPrecio_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void dpFecha_ValueChanged(object sender, EventArgs e)
         {
 
         }

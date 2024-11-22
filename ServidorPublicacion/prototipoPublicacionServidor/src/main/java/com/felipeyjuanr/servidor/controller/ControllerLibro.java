@@ -33,6 +33,13 @@ public class ControllerLibro {
                 ResponseEntity.noContent().build() : ResponseEntity.ok(libros);
     }
 
+    @GetMapping("/tapa/{tapa}")
+    public ResponseEntity<List<Libro>> getLibrosTapaDura(@PathVariable boolean tapa) {
+        List libros = servicioLibro.getLibrosTapaDura(tapa);
+        return (libros.isEmpty()) ?
+                ResponseEntity.noContent().build() : ResponseEntity.ok(libros);
+    }
+
 
     @PostMapping("/agregar")
     public ResponseEntity<String> agregarLibro(@RequestBody Libro libro) {

@@ -63,7 +63,7 @@ namespace Cliente
                 if (libroEncontrado != null)
                 {
                     txtTitulo.Text = libroEncontrado.Titulo;
-                    txtAutores.Text = libroEncontrado.Autor;
+                    txtAutor.Text = string.Join(", ", libroEncontrado.Autores);
                     txtPaginas.Text = libroEncontrado.CantidadPaginas.ToString();
                     dpFecha.Value = libroEncontrado.FechaCreacion;
                     txtPrecio.Text = libroEncontrado.Precio.ToString();
@@ -74,7 +74,7 @@ namespace Cliente
                 else
                 {
                     txtTitulo.Text = "";
-                    txtAutores.Text = "";
+                    txtAutor.Text = "";
                     txtPaginas.Text = "";
                     dpFecha.Value = DateTime.Now;
                     txtPrecio.Text = "";
@@ -88,9 +88,5 @@ namespace Cliente
             }
         }
 
-        private void txtAutores_TextChanged(object sender, EventArgs e)
-        {
-
-        }
     }
 }
