@@ -63,7 +63,7 @@ namespace Cliente
                 if (libroEncontrado != null)
                 {
                     txtTitulo.Text = libroEncontrado.Titulo;
-                    txtAutor.Text = string.Join(", ", libroEncontrado.Autores);
+                    txtAutor.Text = libroEncontrado.Autor;
                     txtPaginas.Text = libroEncontrado.CantidadPaginas.ToString();
                     dpFecha.Value = libroEncontrado.FechaCreacion;
                     txtPrecio.Text = libroEncontrado.Precio.ToString();

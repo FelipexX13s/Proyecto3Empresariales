@@ -47,6 +47,7 @@ namespace Cliente
                 txtNombre.Text = autorEncontrado.Nombre;
                 txtEdad.Text = autorEncontrado.Edad.ToString();
                 txtNacionalidad.Text = autorEncontrado.Nacionalidad;
+                txtRegalias.Text = autorEncontrado.PorcentajeRegalias.ToString();
 
                 MessageBox.Show("Autor encontrado. Puede modificar los campos y luego presionar 'Actualizar'.", "Éxito", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }

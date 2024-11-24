@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Newtonsoft.Json;
 
 namespace Cliente.Model
 {
@@ -12,6 +13,7 @@ namespace Cliente.Model
         public int Edad { get; set; }
         public string Nacionalidad { get; set; }
 
+        [JsonProperty("regalias")]
         public double PorcentajeRegalias { get; set; }
         public DateTime FechaNacimiento { get; set; }
 

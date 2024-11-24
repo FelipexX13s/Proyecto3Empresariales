@@ -2,8 +2,9 @@
   "ExpandedNodes": [
     "",
     "\\Cliente",
-    "\\Cliente\\Cliente"
+    "\\Cliente\\Cliente",
+    "\\Cliente\\Cliente\\Service"
   ],
-  "SelectedNode": "\\Cliente\\Cliente\\GUIActualizar.cs",
+  "SelectedNode": "\\Cliente\\Cliente\\GUIBuscarAutor.cs",
   "PreviewInSolutionExplorer": false
 }

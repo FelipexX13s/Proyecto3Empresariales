@@ -42,6 +42,8 @@ namespace Cliente
                 txtNombre.Text = autor.Nombre;
                 txtEdad.Text = autor.Edad.ToString();
                 txtNacionalidad.Text = autor.Nacionalidad;
+                dpFecha.Value = autor.FechaNacimiento;
+                txtRegalias.Text = autor.PorcentajeRegalias.ToString();
                 MessageBox.Show("Autor encontrado.", "Éxito", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
             else

@@ -124,7 +124,7 @@ namespace Cliente
         {
             txtBuscar.Text = "";
             txtTitulo.Text = "";
-            txtAutor.Text = "";
+            cbxAutores.Text = "";
             txtPaginas.Text = "";
             dpFecha.Value = DateTime.Now;
             txtPrecio.Text = "";

@@ -1,5 +1,6 @@
 package com.felipeyjuanr.servidor.model;
 
+import com.fasterxml.jackson.annotation.JsonBackReference;
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import jakarta.persistence.*;
 import jakarta.validation.constraints.*;
@@ -29,10 +30,12 @@ public class Libro
 
     @NotBlank(message = "El título es obligatorio")
     @Size(max = 255, message = "El título no puede tener más de 255 caracteres")
+    @Column(unique = true)
     private String titulo;
 
     @ManyToOne(fetch = FetchType.LAZY, optional = true)
     @JoinColumn(name = "autor_id", nullable = true)
+    @JsonBackReference
     private Autor autor;
 
     @Min(value = 1, message = "La cantidad de páginas debe ser al menos 1")

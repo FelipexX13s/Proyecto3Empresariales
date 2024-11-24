@@ -16,15 +16,13 @@ namespace Cliente
     {
         private ServicioLibroCliente servicioLibro;
         private ServicioAutor servicioAutor;
-        private List<string> autores;
         public GUIAgregar()
         {
             servicioLibro = new ServicioLibroCliente();
             servicioAutor = new ServicioAutor();
             InitializeComponent();
             cbxAutores.DataSource = servicioLibro.ObtenerNombresAutores();
-            cbxAutores.DisplayMember = "Nombre";
-            autores = new List<string>();
+            cbxAutores.SelectedIndex = -1;
         }
 
         private void lblCantidadPaginas_Click(object sender, EventArgs e)
@@ -69,11 +67,14 @@ namespace Cliente
 
                 DateTime fecha = dpFecha.Value;
 
-                var autor = cbxAutores.SelectedItem.ToString().Trim();
+                string autor = cbxAutores.SelectedItem == null ? 
+                    null : cbxAutores.SelectedItem.ToString().Trim();
+
+                MessageBox.Show(autor);
+
                 if (string.IsNullOrEmpty(autor))
                 {
-                    MessageBox.Show("El autor no puede estar vacío.", "Error de entrada", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                    return;
+                    autor = null;
                 }
 
                 bool tapaDura = chxTapaDura.Checked;
@@ -101,8 +102,9 @@ namespace Cliente
             txtPrecio.Text = "";
             txtTitulo.Text = "";
             dpFecha.Value = DateTime.Now;
+            cbxAutores.DataSource = servicioLibro.ObtenerNombresAutores();
+           cbxAutores.SelectedIndex = -1;
             chxTapaDura.Checked = false;
-            autores = new List<string>();
         }
 
         private void lblAutor_Click(object sender, EventArgs e)
@@ -111,11 +113,6 @@ namespace Cliente
         }
 
         private void checkBox1_CheckedChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void txtAutor_TextChanged(object sender, EventArgs e)
         {
 
         }

@@ -1,6 +1,7 @@
 package com.felipeyjuanr.servidor.model;
 
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+import com.fasterxml.jackson.annotation.JsonManagedReference;
 import jakarta.persistence.*;
 import jakarta.validation.constraints.*;
 import lombok.AllArgsConstructor;
@@ -28,6 +29,7 @@ public class Autor {
 
     @NotBlank(message = "El nombre es obligatorio")
     @Size(max = 255, message = "El nombre no puede tener más de 255 caracteres")
+    @Column(unique = true)
     private String nombre;
 
     @Min(value = 0, message = "La edad no puede ser negativa")
@@ -46,8 +48,8 @@ public class Autor {
 
 
     @OneToMany(mappedBy = "autor", orphanRemoval = false)
-
-    private List<Libro> libros;
+    @JsonManagedReference
+    private List<Libro> libros = new ArrayList<>();
 
 
 }

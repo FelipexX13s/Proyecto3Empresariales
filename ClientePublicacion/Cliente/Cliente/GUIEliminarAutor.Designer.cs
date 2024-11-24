@@ -43,8 +43,9 @@
             this.label4 = new System.Windows.Forms.Label();
             this.txtRegalias = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
+            this.label7 = new System.Windows.Forms.Label();
+            this.dpFecha = new System.Windows.Forms.DateTimePicker();
             this.SuspendLayout();
             // 
             // btnEliminarAutor
@@ -171,7 +172,7 @@
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Arial Rounded MT Bold", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(368, 277);
+            this.label4.Location = new System.Drawing.Point(368, 245);
             this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(22, 18);
@@ -181,7 +182,7 @@
             // txtRegalias
             // 
             this.txtRegalias.Enabled = false;
-            this.txtRegalias.Location = new System.Drawing.Point(205, 275);
+            this.txtRegalias.Location = new System.Drawing.Point(205, 243);
             this.txtRegalias.Margin = new System.Windows.Forms.Padding(2);
             this.txtRegalias.Name = "txtRegalias";
             this.txtRegalias.Size = new System.Drawing.Size(159, 20);
@@ -191,20 +192,12 @@
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Arial Rounded MT Bold", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(13, 274);
+            this.label6.Location = new System.Drawing.Point(13, 242);
             this.label6.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(188, 18);
             this.label6.TabIndex = 47;
             this.label6.Text = "Porcentaje en regalías";
-            // 
-            // textBox1
-            // 
-            this.textBox1.Location = new System.Drawing.Point(128, 245);
-            this.textBox1.Margin = new System.Windows.Forms.Padding(2);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(262, 20);
-            this.textBox1.TabIndex = 46;
             // 
             // label5
             // 
@@ -213,19 +206,38 @@
             this.label5.Location = new System.Drawing.Point(12, 243);
             this.label5.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(112, 18);
+            this.label5.Size = new System.Drawing.Size(0, 18);
             this.label5.TabIndex = 45;
-            this.label5.Text = "Nacionalidad";
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Font = new System.Drawing.Font("Arial Rounded MT Bold", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.Location = new System.Drawing.Point(11, 273);
+            this.label7.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(174, 18);
+            this.label7.TabIndex = 51;
+            this.label7.Text = "Fecha de nacimiento";
+            // 
+            // dpFecha
+            // 
+            this.dpFecha.Enabled = false;
+            this.dpFecha.Location = new System.Drawing.Point(190, 271);
+            this.dpFecha.Name = "dpFecha";
+            this.dpFecha.Size = new System.Drawing.Size(200, 20);
+            this.dpFecha.TabIndex = 50;
             // 
             // GUIEliminarAutor
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(401, 351);
+            this.Controls.Add(this.label7);
+            this.Controls.Add(this.dpFecha);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.txtRegalias);
             this.Controls.Add(this.label6);
-            this.Controls.Add(this.textBox1);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.btnEliminarAutor);
             this.Controls.Add(this.btnBuscarAutor);
@@ -264,7 +276,8 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.TextBox txtRegalias;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.DateTimePicker dpFecha;
     }
 }

@@ -38,17 +38,8 @@ namespace Cliente
             try
             {
                 libros = servicioLibro.ObtenerLibros();
-                var librosVista = libros.Select(l => new LibroVista
-                {
-                    Titulo = l.Titulo,
-                    Autores = string.Join(", ", l.Autores),
-                    CantidadPaginas = l.CantidadPaginas,
-                    FechaCreacion = l.FechaCreacion,
-                    Precio = l.Precio,
-                    TapaDura = l.TapaDura
-                }).ToList();
 
-                dataGridView1.DataSource = librosVista;
+                dataGridView1.DataSource = libros;
                 dataGridView1.Refresh();
             }
             catch (Exception ex)
@@ -63,17 +54,7 @@ namespace Cliente
             {
                 libros = servicioLibro.ObtenerLibrosAutor(txtAutor.Text);
 
-                var librosVista = libros.Select(l => new LibroVista
-                {
-                    Titulo = l.Titulo,
-                    Autores = l.Autores.ToString(),
-                    CantidadPaginas = l.CantidadPaginas,
-                    FechaCreacion = l.FechaCreacion,
-                    Precio = l.Precio,
-                    TapaDura = l.TapaDura
-                }).ToList();
-
-                dataGridView1.DataSource = librosVista;
+                dataGridView1.DataSource = libros;
             }
             catch (Exception ex)
             {
@@ -93,17 +74,7 @@ namespace Cliente
             {
                 libros = servicioLibro.ObtenerLibrosTapaDura(chxTapaDura.Checked);
 
-                var librosVista = libros.Select(l => new LibroVista
-                {
-                    Titulo = l.Titulo,
-                    Autores = l.Autores.ToString(),
-                    CantidadPaginas = l.CantidadPaginas,
-                    FechaCreacion = l.FechaCreacion,
-                    Precio = l.Precio,
-                    TapaDura = l.TapaDura
-                }).ToList();
-
-                dataGridView1.DataSource = librosVista;
+                dataGridView1.DataSource = libros;
             }
             catch (Exception ex)
             {

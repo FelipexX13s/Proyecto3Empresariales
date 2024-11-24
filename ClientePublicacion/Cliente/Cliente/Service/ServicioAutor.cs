@@ -4,6 +4,7 @@ using System.Linq;
 using System.Net;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 using Cliente.Model;
 using Newtonsoft.Json;
 using RestSharp;
@@ -12,7 +13,7 @@ namespace Cliente.Service
 {
     public class ServicioAutor
     {
-        private const string BaseUrl = "http://localhost:8080";
+        private const string BaseUrl = "http://localhost:8090";
         private const string Dominio = "/autores";
 
         public ServicioAutor()
@@ -66,6 +67,7 @@ namespace Cliente.Service
             var client = new RestClient(options);
             var request = new RestRequest(Dominio + "/agregar", Method.Post);
 
+
             request.AddHeader("Content-Type", "application/json");
 
             request.AddBody(new
@@ -74,8 +76,8 @@ namespace Cliente.Service
                 edad = edadx,
                 nacionalidad = nacionalidadx,
                 regalias = porcentajeRegaliasx,
-                fecha = fechaNacimientox
-            });
+                fechaNacimiento = fechaNacimientox.ToString("yyyy-MM-ddTHH:mm:ss")
+        });
 
             var response = client.Execute(request);
 
@@ -115,7 +117,7 @@ namespace Cliente.Service
                 edad = edadx,
                 nacionalidad = nacionalidadx,
                 regalias = porcentajeRegaliasx,
-                fecha = fechaNacimientox
+                fechaNacimiento = fechaNacimientox.ToString("yyyy-MM-ddTHH:mm:ss")
             });
 
             var response = client.Execute(request);

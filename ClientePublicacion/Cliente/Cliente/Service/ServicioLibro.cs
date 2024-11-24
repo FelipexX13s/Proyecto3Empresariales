@@ -14,13 +14,13 @@ namespace Cliente.Service
 {
     public class ServicioLibroCliente
     {
-        private const string BaseUrl = "http://localhost:8080";
+        private const string BaseUrl = "http://localhost:8090";
 
-        private ServicioLibroCliente servicioLibroCliente;
+        private ServicioAutor servicioAutor;
 
         public ServicioLibroCliente()
         {
-            servicioLibroCliente = new ServicioLibroCliente();
+            servicioAutor = new ServicioAutor();
         }
 
         public List<Libro> ObtenerLibros()
@@ -36,7 +36,7 @@ namespace Cliente.Service
 
         public List<string> ObtenerNombresAutores()
         {
-            return servicioLibroCliente.ObtenerNombresAutores();
+            return servicioAutor.ObtenerNombresAutores();
         }
 
         public List<Libro> ObtenerLibrosAutor(String autor)
@@ -81,7 +81,6 @@ namespace Cliente.Service
                 var body = new
                 {
                     titulo = titulox,
-                    
                     cantidadPaginas = paginas,
                     fechaCreacion = fechaISO,
                     precio = preciox,
@@ -92,10 +91,11 @@ namespace Cliente.Service
             }
             else
             {
+                var autorz = servicioAutor.BuscarAutor(autorx);
                 var body = new
                 {
                     titulo = titulox,
-                    autor = autorx,
+                    autor = autorz,
                     cantidadPaginas = paginas,
                     fechaCreacion = fechaISO,
                     precio = preciox,
@@ -182,19 +182,43 @@ namespace Cliente.Service
             request.AddHeader("Content-Type", "application/json");
             var fechaISO = fechax.ToString("yyyy-MM-ddTHH:mm:ss");
 
-            request.AddJsonBody(new
+            if (autorx == null)
             {
-                cantidadPaginas = paginasx,
-                precio = preciox,
-                titulo = titulox,
-                fechaCreacion = fechaISO,
-                autor = autorx,
-                tapaDura = tapaDurax
-            });
+                var body = new
+                {
+                    titulo = titulox,
+                    cantidadPaginas = paginasx,
+                    fechaCreacion = fechaISO,
+                    precio = preciox,
+                    tapaDura = tapaDurax
+                };
+
+                request.AddBody(body);
+            }
+            else
+            {
+                var autorz = servicioAutor.BuscarAutor(autorx);
+                var body = new
+                {
+                    titulo = titulox,
+                    autor = autorz,
+                    cantidadPaginas = paginasx,
+                    fechaCreacion = fechaISO,
+                    precio = preciox,
+                    tapaDura = tapaDurax
+                };
+
+                request.AddBody(body);
+            }
+
 
             var response = client.Execute(request);
 
-            return response.IsSuccessful;
+            if (response.IsSuccessful)
+            {
+                return true;
+            }
+            return false;
         }
     }
 }

@@ -3,6 +3,7 @@ package com.felipeyjuanr.servidor.controller;
 import com.felipeyjuanr.servidor.model.Autor;
 import com.felipeyjuanr.servidor.model.Libro;
 import com.felipeyjuanr.servidor.services.ServicioAutor;
+import com.felipeyjuanr.servidor.services.ServicioLibro;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -17,6 +18,8 @@ public class ControllerAutor {
 
     @Autowired
     private ServicioAutor servicioAutor;
+    @Autowired
+    private ServicioLibro servicioLibro;
 
     @GetMapping
     public ResponseEntity<List<Autor>> getAutores() {
@@ -65,6 +68,7 @@ public class ControllerAutor {
             return ResponseEntity.badRequest().build();
         }
         Autor autor = servicioAutor.buscarAutor(nombre);
+        System.out.println(autor.getNombre());
         return autor != null ?
                 ResponseEntity.ok(autor) :
                 ResponseEntity.notFound().build();
@@ -88,6 +92,9 @@ public class ControllerAutor {
         if (nombreAntiguo == null || nombreAntiguo.trim().isEmpty() || !autorCorrecto(autorActualizado)) {
             return ResponseEntity.badRequest().body("Datos inválidos para la actualización");
         }
+
+        List<Libro> libros = servicioLibro.getLibrosAutores(nombreAntiguo);
+
         boolean actualizado = servicioAutor.actualizarAutor(
                 nombreAntiguo,
                 autorActualizado.getNombre(),
@@ -95,7 +102,7 @@ public class ControllerAutor {
                 autorActualizado.getNacionalidad(),
                 autorActualizado.getRegalias(),
                 autorActualizado.getFechaNacimiento(),
-                autorActualizado.getLibros()
+                libros
         );
         return actualizado ?
                 ResponseEntity.ok("Autor actualizado exitosamente") :
@@ -123,6 +130,14 @@ public class ControllerAutor {
     }
 
     private boolean autorCorrecto(Autor autor) {
+
+        System.out.println(autor.getNombre());
+        System.out.println(autor.getEdad());
+        System.out.println(autor.getNacionalidad());
+        System.out.println(autor.getRegalias());
+        System.out.println(autor.getFechaNacimiento());
+
+
         return autor != null &&
                 autor.getNombre() != null && !autor.getNombre().trim().isEmpty() &&
                 autor.getEdad() > 0 &&
