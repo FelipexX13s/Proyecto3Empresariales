@@ -3,36 +3,48 @@
   "WorkspaceRootPath": "D:\\Mis archivos\\2024\\2024B\\Desarrollo de Aplicaciones Empresariales\\Corte 3\\Proyecto3Empresariales\\ClientePublicacion\\Cliente\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{8A9F1A7D-9E78-416F-9891-75CDED958953}|Cliente\\Cliente.csproj|D:\\Mis archivos\\2024\\2024B\\Desarrollo de Aplicaciones Empresariales\\Corte 3\\Proyecto3Empresariales\\ClientePublicacion\\Cliente\\cliente\\service\\servicioautor.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{8A9F1A7D-9E78-416F-9891-75CDED958953}|Cliente\\Cliente.csproj|solutionrelative:cliente\\service\\servicioautor.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{8A9F1A7D-9E78-416F-9891-75CDED958953}|Cliente\\Cliente.csproj|d:\\mis archivos\\2024\\2024b\\desarrollo de aplicaciones empresariales\\corte 3\\proyecto3empresariales\\clientepublicacion\\cliente\\cliente\\service\\serviciolibro.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8A9F1A7D-9E78-416F-9891-75CDED958953}|Cliente\\Cliente.csproj|solutionrelative:cliente\\service\\serviciolibro.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{8A9F1A7D-9E78-416F-9891-75CDED958953}|Cliente\\Cliente.csproj|d:\\mis archivos\\2024\\2024b\\desarrollo de aplicaciones empresariales\\corte 3\\proyecto3empresariales\\clientepublicacion\\cliente\\cliente\\guiactualizarautor.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{8A9F1A7D-9E78-416F-9891-75CDED958953}|Cliente\\Cliente.csproj|solutionrelative:cliente\\guiactualizarautor.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{8A9F1A7D-9E78-416F-9891-75CDED958953}|Cliente\\Cliente.csproj|d:\\mis archivos\\2024\\2024b\\desarrollo de aplicaciones empresariales\\corte 3\\proyecto3empresariales\\clientepublicacion\\cliente\\cliente\\guiagregar.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8A9F1A7D-9E78-416F-9891-75CDED958953}|Cliente\\Cliente.csproj|solutionrelative:cliente\\guiagregar.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{8A9F1A7D-9E78-416F-9891-75CDED958953}|Cliente\\Cliente.csproj|d:\\mis archivos\\2024\\2024b\\desarrollo de aplicaciones empresariales\\corte 3\\proyecto3empresariales\\clientepublicacion\\cliente\\cliente\\guiagregarautor.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{8A9F1A7D-9E78-416F-9891-75CDED958953}|Cliente\\Cliente.csproj|solutionrelative:cliente\\guiagregarautor.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{8A9F1A7D-9E78-416F-9891-75CDED958953}|Cliente\\Cliente.csproj|d:\\mis archivos\\2024\\2024b\\desarrollo de aplicaciones empresariales\\corte 3\\proyecto3empresariales\\clientepublicacion\\cliente\\cliente\\guibuscarautor.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{8A9F1A7D-9E78-416F-9891-75CDED958953}|Cliente\\Cliente.csproj|solutionrelative:cliente\\guibuscarautor.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{8A9F1A7D-9E78-416F-9891-75CDED958953}|Cliente\\Cliente.csproj|d:\\mis archivos\\2024\\2024b\\desarrollo de aplicaciones empresariales\\corte 3\\proyecto3empresariales\\clientepublicacion\\cliente\\cliente\\guiactualizarautor.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{8A9F1A7D-9E78-416F-9891-75CDED958953}|Cliente\\Cliente.csproj|solutionrelative:cliente\\guiactualizarautor.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{8A9F1A7D-9E78-416F-9891-75CDED958953}|Cliente\\Cliente.csproj|d:\\mis archivos\\2024\\2024b\\desarrollo de aplicaciones empresariales\\corte 3\\proyecto3empresariales\\clientepublicacion\\cliente\\cliente\\model\\autor.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{8A9F1A7D-9E78-416F-9891-75CDED958953}|Cliente\\Cliente.csproj|solutionrelative:cliente\\model\\autor.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{8A9F1A7D-9E78-416F-9891-75CDED958953}|Cliente\\Cliente.csproj|d:\\mis archivos\\2024\\2024b\\desarrollo de aplicaciones empresariales\\corte 3\\proyecto3empresariales\\clientepublicacion\\cliente\\cliente\\guibuscarautor.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{8A9F1A7D-9E78-416F-9891-75CDED958953}|Cliente\\Cliente.csproj|solutionrelative:cliente\\guibuscarautor.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+      "AbsoluteMoniker": "D:0:0:{8A9F1A7D-9E78-416F-9891-75CDED958953}|Cliente\\Cliente.csproj|d:\\mis archivos\\2024\\2024b\\desarrollo de aplicaciones empresariales\\corte 3\\proyecto3empresariales\\clientepublicacion\\cliente\\cliente\\guiagregar.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{8A9F1A7D-9E78-416F-9891-75CDED958953}|Cliente\\Cliente.csproj|solutionrelative:cliente\\guiagregar.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
       "AbsoluteMoniker": "D:0:0:{8A9F1A7D-9E78-416F-9891-75CDED958953}|Cliente\\Cliente.csproj|D:\\Mis archivos\\2024\\2024B\\Desarrollo de Aplicaciones Empresariales\\Corte 3\\Proyecto3Empresariales\\ClientePublicacion\\Cliente\\cliente\\guiprincipal.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{8A9F1A7D-9E78-416F-9891-75CDED958953}|Cliente\\Cliente.csproj|solutionrelative:cliente\\guiprincipal.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8A9F1A7D-9E78-416F-9891-75CDED958953}|Cliente\\Cliente.csproj|D:\\Mis archivos\\2024\\2024B\\Desarrollo de Aplicaciones Empresariales\\Corte 3\\Proyecto3Empresariales\\ClientePublicacion\\Cliente\\cliente\\guibuscarautor.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8A9F1A7D-9E78-416F-9891-75CDED958953}|Cliente\\Cliente.csproj|solutionrelative:cliente\\guibuscarautor.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8A9F1A7D-9E78-416F-9891-75CDED958953}|Cliente\\Cliente.csproj|D:\\Mis archivos\\2024\\2024B\\Desarrollo de Aplicaciones Empresariales\\Corte 3\\Proyecto3Empresariales\\ClientePublicacion\\Cliente\\cliente\\guibuscarautor.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{8A9F1A7D-9E78-416F-9891-75CDED958953}|Cliente\\Cliente.csproj|solutionrelative:cliente\\guibuscarautor.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8A9F1A7D-9E78-416F-9891-75CDED958953}|Cliente\\Cliente.csproj|d:\\mis archivos\\2024\\2024b\\desarrollo de aplicaciones empresariales\\corte 3\\proyecto3empresariales\\clientepublicacion\\cliente\\cliente\\service\\servicioautor.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8A9F1A7D-9E78-416F-9891-75CDED958953}|Cliente\\Cliente.csproj|solutionrelative:cliente\\service\\servicioautor.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8A9F1A7D-9E78-416F-9891-75CDED958953}|Cliente\\Cliente.csproj|D:\\Mis archivos\\2024\\2024B\\Desarrollo de Aplicaciones Empresariales\\Corte 3\\Proyecto3Empresariales\\ClientePublicacion\\Cliente\\cliente\\guiactualizarautor.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8A9F1A7D-9E78-416F-9891-75CDED958953}|Cliente\\Cliente.csproj|solutionrelative:cliente\\guiactualizarautor.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8A9F1A7D-9E78-416F-9891-75CDED958953}|Cliente\\Cliente.csproj|D:\\Mis archivos\\2024\\2024B\\Desarrollo de Aplicaciones Empresariales\\Corte 3\\Proyecto3Empresariales\\ClientePublicacion\\Cliente\\cliente\\guiagregarautor.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8A9F1A7D-9E78-416F-9891-75CDED958953}|Cliente\\Cliente.csproj|solutionrelative:cliente\\guiagregarautor.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8A9F1A7D-9E78-416F-9891-75CDED958953}|Cliente\\Cliente.csproj|D:\\Mis archivos\\2024\\2024B\\Desarrollo de Aplicaciones Empresariales\\Corte 3\\Proyecto3Empresariales\\ClientePublicacion\\Cliente\\cliente\\guiactualizarautor.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{8A9F1A7D-9E78-416F-9891-75CDED958953}|Cliente\\Cliente.csproj|solutionrelative:cliente\\guiactualizarautor.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8A9F1A7D-9E78-416F-9891-75CDED958953}|Cliente\\Cliente.csproj|D:\\Mis archivos\\2024\\2024B\\Desarrollo de Aplicaciones Empresariales\\Corte 3\\Proyecto3Empresariales\\ClientePublicacion\\Cliente\\cliente\\model\\autor.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8A9F1A7D-9E78-416F-9891-75CDED958953}|Cliente\\Cliente.csproj|solutionrelative:cliente\\model\\autor.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -42,7 +54,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 8,
+          "SelectedChildIndex": 1,
           "Children": [
             {
               "$type": "Bookmark",
@@ -50,7 +62,45 @@
             },
             {
               "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "ServicioLibro.cs",
+              "DocumentMoniker": "D:\\Mis archivos\\2024\\2024B\\Desarrollo de Aplicaciones Empresariales\\Corte 3\\Proyecto3Empresariales\\ClientePublicacion\\Cliente\\Cliente\\Service\\ServicioLibro.cs",
+              "RelativeDocumentMoniker": "Cliente\\Service\\ServicioLibro.cs",
+              "ToolTip": "D:\\Mis archivos\\2024\\2024B\\Desarrollo de Aplicaciones Empresariales\\Corte 3\\Proyecto3Empresariales\\ClientePublicacion\\Cliente\\Cliente\\Service\\ServicioLibro.cs",
+              "RelativeToolTip": "Cliente\\Service\\ServicioLibro.cs",
+              "ViewState": "AQIAABsAAAAAAAAAAAAowAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-25T07:01:25.044Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "GUIAgregar.cs",
+              "DocumentMoniker": "D:\\Mis archivos\\2024\\2024B\\Desarrollo de Aplicaciones Empresariales\\Corte 3\\Proyecto3Empresariales\\ClientePublicacion\\Cliente\\Cliente\\GUIAgregar.cs",
+              "RelativeDocumentMoniker": "Cliente\\GUIAgregar.cs",
+              "ToolTip": "D:\\Mis archivos\\2024\\2024B\\Desarrollo de Aplicaciones Empresariales\\Corte 3\\Proyecto3Empresariales\\ClientePublicacion\\Cliente\\Cliente\\GUIAgregar.cs",
+              "RelativeToolTip": "Cliente\\GUIAgregar.cs",
+              "ViewState": "AQIAABEAAAAAAAAAAAAQwCwAAAAMAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-25T07:01:12.803Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
               "DocumentIndex": 2,
+              "Title": "GUIAgregar.cs [Dise\u00F1o]",
+              "DocumentMoniker": "D:\\Mis archivos\\2024\\2024B\\Desarrollo de Aplicaciones Empresariales\\Corte 3\\Proyecto3Empresariales\\ClientePublicacion\\Cliente\\Cliente\\GUIAgregar.cs",
+              "RelativeDocumentMoniker": "Cliente\\GUIAgregar.cs",
+              "ToolTip": "D:\\Mis archivos\\2024\\2024B\\Desarrollo de Aplicaciones Empresariales\\Corte 3\\Proyecto3Empresariales\\ClientePublicacion\\Cliente\\Cliente\\GUIAgregar.cs [Dise\u00F1o]",
+              "RelativeToolTip": "Cliente\\GUIAgregar.cs [Dise\u00F1o]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-25T07:01:10.559Z",
+              "EditorCaption": " [Dise\u00F1o]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
               "Title": "GUIAgregarAutor.cs",
               "DocumentMoniker": "D:\\Mis archivos\\2024\\2024B\\Desarrollo de Aplicaciones Empresariales\\Corte 3\\Proyecto3Empresariales\\ClientePublicacion\\Cliente\\Cliente\\GUIAgregarAutor.cs",
               "RelativeDocumentMoniker": "Cliente\\GUIAgregarAutor.cs",
@@ -58,12 +108,11 @@
               "RelativeToolTip": "Cliente\\GUIAgregarAutor.cs",
               "ViewState": "AQIAACgAAAAAAAAAAAAowBkAAAAMAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-24T21:59:40.236Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-11-24T21:59:40.236Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 7,
               "Title": "GUIActualizarAutor.cs",
               "DocumentMoniker": "D:\\Mis archivos\\2024\\2024B\\Desarrollo de Aplicaciones Empresariales\\Corte 3\\Proyecto3Empresariales\\ClientePublicacion\\Cliente\\Cliente\\GUIActualizarAutor.cs",
               "RelativeDocumentMoniker": "Cliente\\GUIActualizarAutor.cs",
@@ -71,24 +120,22 @@
               "RelativeToolTip": "Cliente\\GUIActualizarAutor.cs",
               "ViewState": "AQIAAHcAAAAAAAAAAAAUwCwAAAANAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-24T21:49:09.787Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-11-24T21:49:09.787Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 9,
               "Title": "GUIActualizarAutor.cs [Dise\u00F1o]",
               "DocumentMoniker": "D:\\Mis archivos\\2024\\2024B\\Desarrollo de Aplicaciones Empresariales\\Corte 3\\Proyecto3Empresariales\\ClientePublicacion\\Cliente\\Cliente\\GUIActualizarAutor.cs",
               "RelativeDocumentMoniker": "Cliente\\GUIActualizarAutor.cs",
               "ToolTip": "D:\\Mis archivos\\2024\\2024B\\Desarrollo de Aplicaciones Empresariales\\Corte 3\\Proyecto3Empresariales\\ClientePublicacion\\Cliente\\Cliente\\GUIActualizarAutor.cs [Dise\u00F1o]",
               "RelativeToolTip": "Cliente\\GUIActualizarAutor.cs [Dise\u00F1o]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-24T21:49:08.158Z",
-              "EditorCaption": " [Dise\u00F1o]"
+              "WhenOpened": "2024-11-24T21:49:08.158Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 10,
               "Title": "Autor.cs",
               "DocumentMoniker": "D:\\Mis archivos\\2024\\2024B\\Desarrollo de Aplicaciones Empresariales\\Corte 3\\Proyecto3Empresariales\\ClientePublicacion\\Cliente\\Cliente\\Model\\Autor.cs",
               "RelativeDocumentMoniker": "Cliente\\Model\\Autor.cs",
@@ -96,25 +143,24 @@
               "RelativeToolTip": "Cliente\\Model\\Autor.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAYAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-24T21:45:07.5Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-11-24T21:45:07.5Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 4,
               "Title": "GUIBuscarAutor.cs",
               "DocumentMoniker": "D:\\Mis archivos\\2024\\2024B\\Desarrollo de Aplicaciones Empresariales\\Corte 3\\Proyecto3Empresariales\\ClientePublicacion\\Cliente\\Cliente\\GUIBuscarAutor.cs",
               "RelativeDocumentMoniker": "Cliente\\GUIBuscarAutor.cs",
               "ToolTip": "D:\\Mis archivos\\2024\\2024B\\Desarrollo de Aplicaciones Empresariales\\Corte 3\\Proyecto3Empresariales\\ClientePublicacion\\Cliente\\Cliente\\GUIBuscarAutor.cs",
               "RelativeToolTip": "Cliente\\GUIBuscarAutor.cs",
-              "ViewState": "AQIAABsAAAAAAAAAAAAAwCYAAAA2AAAA",
+              "ViewState": "AQIAACgAAAAAAAAAAAAAAC8AAABEAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-11-24T21:42:18.833Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 5,
               "Title": "GUIBuscarAutor.cs [Dise\u00F1o]",
               "DocumentMoniker": "D:\\Mis archivos\\2024\\2024B\\Desarrollo de Aplicaciones Empresariales\\Corte 3\\Proyecto3Empresariales\\ClientePublicacion\\Cliente\\Cliente\\GUIBuscarAutor.cs",
               "RelativeDocumentMoniker": "Cliente\\GUIBuscarAutor.cs",
@@ -126,20 +172,20 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 3,
               "Title": "GUIPrincipal.cs",
               "DocumentMoniker": "D:\\Mis archivos\\2024\\2024B\\Desarrollo de Aplicaciones Empresariales\\Corte 3\\Proyecto3Empresariales\\ClientePublicacion\\Cliente\\Cliente\\GUIPrincipal.cs",
               "RelativeDocumentMoniker": "Cliente\\GUIPrincipal.cs",
               "ToolTip": "D:\\Mis archivos\\2024\\2024B\\Desarrollo de Aplicaciones Empresariales\\Corte 3\\Proyecto3Empresariales\\ClientePublicacion\\Cliente\\Cliente\\GUIPrincipal.cs",
               "RelativeToolTip": "Cliente\\GUIPrincipal.cs",
-              "ViewState": "AQIAABUAAAAAAAAAAAAiwCAAAAAyAAAA",
+              "ViewState": "AQIAAEIAAAAAAAAAAAAYwEUAAAAVAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-11-24T05:15:11.746Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 6,
               "Title": "ServicioAutor.cs",
               "DocumentMoniker": "D:\\Mis archivos\\2024\\2024B\\Desarrollo de Aplicaciones Empresariales\\Corte 3\\Proyecto3Empresariales\\ClientePublicacion\\Cliente\\Cliente\\Service\\ServicioAutor.cs",
               "RelativeDocumentMoniker": "Cliente\\Service\\ServicioAutor.cs",

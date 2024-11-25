@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Buscar Libro</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f4f4f9;
+      margin: 0;
+      padding: 20px;
+    }
+    .container {
+      max-width: 500px;
+      margin: 0 auto;
+      padding: 20px;
+      background-color: #fff;
+      border: 1px solid #ddd;
+      border-radius: 8px;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    }
+    h1 {
+      text-align: center;
+      margin-bottom: 20px;
+    }
+    label {
+      font-weight: bold;
+      display: block;
+      margin-top: 10px;
+    }
+    input[type="text"], input[type="number"], input[type="datetime-local"], button {
+      width: 100%;
+      padding: 10px;
+      margin-top: 5px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+    }
+    button {
+      background-color: #007BFF;
+      color: white;
+      border: none;
+      cursor: pointer;
+      margin-top: 15px;
+    }
+    button:hover {
+      background-color: #0056b3;
+    }
+    .resultado {
+      margin-top: 20px;
+    }
+    .resultado h2 {
+      margin-bottom: 20px;
+      font-size: 1.2rem;
+      text-align: center;
+    }
+  </style>
+  <script>
+    const BaseUrl = "http://localhost:8090";
+  
+    function buscar() {
+      const titulo = document.getElementById("lineEdit").value;
+  
+      fetch(`${BaseUrl}/libros/buscar/${titulo}`, {
+        method: 'GET',
+        headers: {
+            'Accept': 'application/json',
+            'Content-Type': 'application/json'
+        },
+        mode: 'cors',
+        credentials: 'include'
+      })
+        .then(response => {
+          if (!response.ok) {
+            throw new Error('Libro no encontrado');
+          }
+          return response.json();
+        })
+        .then(libro => {
+          document.getElementById("txtTitulo").value = libro.titulo;
+          document.getElementById("txtAutor").value = libro.autor ? libro.autor : 'Sin autor';
+          document.getElementById("txtCantidadPaginas").value = libro.cantidadPaginas;
+          document.getElementById("txtPrecio").value = libro.precio;
+          document.getElementById("txtTapaDura").value = libro.tapaDura ? 'Sí' : 'No';
+          document.getElementById("dtFechaCreacion").value = libro.fechaCreacion ? new Date(libro.fechaCreacion).toISOString().slice(0, 16) : '';
+
+          alert("Libro encontrado");
+        })
+        .catch(error => {
+          console.error('Error:', error);
+          alert(error.message);
+          document.getElementById("txtTitulo").value = '';
+          document.getElementById("txtAutor").value = '';
+          document.getElementById("txtCantidadPaginas").value = '';
+          document.getElementById("txtPrecio").value = '';
+          document.getElementById("txtTapaDura").value = '';
+          document.getElementById("dtFechaCreacion").value = '';
+        });
+    }
+  </script>
+</head>
+<body>
+  <div class="container">
+    <h1>Buscar Libro</h1>
+    <form id="formBuscarLibro" onsubmit="event.preventDefault(); buscar();">
+      <label for="lineEdit">Título del libro a buscar:</label>
+      <input type="text" id="lineEdit" name="lineEdit" placeholder="Ingrese el título del libro" required>
+
+      <button type="submit">Buscar</button>
+    </form>
+
+    <div class="resultado">
+      <h2>Libro encontrado</h2>
+      <form>
+        <label for="txtTitulo">Título:</label>
+        <input type="text" id="txtTitulo" name="txtTitulo" disabled>
+
+        <label for="txtAutor">Autor:</label>
+        <input type="text" id="txtAutor" name="txtAutor" disabled>
+
+        <label for="txtCantidadPaginas">Cantidad de Páginas:</label>
+        <input type="number" id="txtCantidadPaginas" name="txtCantidadPaginas" disabled>
+
+        <label for="txtPrecio">Precio:</label>
+        <input type="number" id="txtPrecio" name="txtPrecio" step="0.01" disabled>
+
+        <label for="txtTapaDura">Tapa Dura:</label>
+        <input type="text" id="txtTapaDura" name="txtTapaDura" disabled>
+
+        <label for="dtFechaCreacion">Fecha de Creación:</label>
+        <input type="datetime-local" id="dtFechaCreacion" name="dtFechaCreacion" disabled>
+      </form>
+    </div>
+  </div>
+</body>
+</html>

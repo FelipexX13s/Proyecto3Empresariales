@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Actualizar Libro</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f4f4f9;
+      margin: 0;
+      padding: 20px;
+    }
+    .container {
+      max-width: 500px;
+      margin: 0 auto;
+      padding: 20px;
+      background-color: #fff;
+      border: 1px solid #ddd;
+      border-radius: 8px;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    }
+    h1 {
+      text-align: center;
+      margin-bottom: 20px;
+    }
+    label {
+      font-weight: bold;
+      display: block;
+      margin-top: 10px;
+    }
+    input[type="text"], input[type="number"], input[type="date"], button, select {
+      width: 100%;
+      padding: 10px;
+      margin-top: 5px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+    }
+    button {
+      background-color: #007BFF;
+      color: white;
+      border: none;
+      cursor: pointer;
+    }
+    button:hover {
+      background-color: #0056b3;
+    }
+    .resultado {
+      margin-top: 20px;
+    }
+    .resultado h2 {
+      margin-bottom: 20px;
+      font-size: 1.2rem;
+      text-align: center;
+    }
+  </style>
+  <script>
+    const BaseUrl = "http://localhost:8090";
+
+function cargarAutores() {
+  fetch(BaseUrl + "/autores")
+    .then(response => response.json())
+    .then(autores => {
+      const autorSelect = document.getElementById("autor");
+      autorSelect.innerHTML = '<option value="">Sin autor</option>';
+      autores.forEach(autor => {
+        const option = document.createElement("option");
+        option.value = autor.nombre;
+        option.textContent = autor.nombre;
+        option.setAttribute('data-autor', JSON.stringify(autor));
+        autorSelect.appendChild(option);
+      });
+    })
+    .catch(error => {
+      console.error("Error al cargar los autores:", error);
+      alert("Error al cargar los autores. Por favor, recargue la página.");
+    });
+}
+
+function buscar() {
+  const titulo = document.getElementById("lineEdit").value;
+
+  fetch(`${BaseUrl}/libros/buscar/${titulo}`, {
+    method: 'GET',
+    headers: {
+      'Accept': 'application/json',
+      'Content-Type': 'application/json'
+    }
+  })
+    .then(response => {
+      if (!response.ok) {
+        throw new Error('Libro no encontrado');
+      }
+      return response.json();
+    })
+    .then(libro => {
+      document.getElementById("txtTitulo").value = libro.titulo;
+      document.getElementById("autor").value = libro.autor ? libro.autor.nombre : '';
+      document.getElementById("sbCantidadPaginas").value = libro.cantidadPaginas;
+      document.getElementById("txtPrecio").value = libro.precio;
+      document.getElementById("tapaDura").value = libro.tapaDura.toString();
+      document.getElementById("dtFechaCreacion").value = libro.fechaCreacion ? 
+        new Date(libro.fechaCreacion).toISOString().slice(0, 16) : '';
+
+      alert("Libro encontrado");
+      habilitarCampos();
+    })
+    .catch(error => {
+      alert(error.message);
+    });
+}
+
+function habilitarCampos() {
+  document.getElementById("txtTitulo").disabled = false;
+  document.getElementById("autor").disabled = false;
+  document.getElementById("sbCantidadPaginas").disabled = false;
+  document.getElementById("dtFechaCreacion").disabled = false;
+  document.getElementById("txtPrecio").disabled = false;
+  document.getElementById("tapaDura").disabled = false;
+}
+
+async function actualizar() {
+  try {
+    const fechaInput = document.getElementById("dtFechaCreacion").value;
+    const fecha = new Date(fechaInput);
+    const autorSelect = document.getElementById("autor");
+    const autorNombre = autorSelect.value;
+    
+    const libro = {
+      titulo: document.getElementById("txtTitulo").value,
+      autor: autorNombre ? { nombre: autorNombre } : null,
+      cantidadPaginas: parseInt(document.getElementById("sbCantidadPaginas").value),
+      fechaCreacion: fecha.toISOString(),
+      precio: parseFloat(document.getElementById("txtPrecio").value),
+      tapaDura: document.getElementById("tapaDura").value === 'true'
+    };
+
+    const response = await fetch(`${BaseUrl}/libros/actualizar/${document.getElementById("lineEdit").value}`, {
+      method: 'PUT',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify(libro)
+    });
+
+    const responseData = await response.text();
+
+    if (!response.ok) {
+      throw new Error(responseData || `Error ${response.status}: ${response.statusText}`);
+    }
+
+    alert('Libro actualizado exitosamente');
+    document.getElementById("formLibro").reset();
+    
+  } catch (error) {
+    console.error('Error completo:', error);
+    alert('Error al actualizar: ' + error.message);
+  }
+}
+
+document.addEventListener('DOMContentLoaded', function() {
+  document.getElementById("formBuscarLibro").addEventListener('submit', function(event) {
+    event.preventDefault();
+    buscar();
+  });
+
+  document.getElementById("formLibro").addEventListener('submit', function(event) {
+    event.preventDefault();
+    actualizar();
+  });
+
+  cargarAutores();
+});
+  </script>
+</head>
+<body>
+  <div class="container">
+    <h1>Actualizar Libro</h1>
+    <form id="formBuscarLibro" onsubmit="event.preventDefault(); buscar();">
+      <label for="lineEdit">Título del libro a buscar:</label>
+      <input type="text" id="lineEdit" name="lineEdit" placeholder="Ingrese el título del libro" required>
+
+      <button type="submit">Buscar</button>
+    </form>
+
+    <div class="resultado">
+      <h2>Libro encontrado</h2>
+      <form id="formLibro">
+        <label for="txtTitulo">Título:</label>
+        <input type="text" id="txtTitulo" name="txtTitulo" disabled required>
+
+        <label for="autor">Autor: <span class="optional">(opcional)</span></label>
+        <select id="autor" name="autor" disabled>
+          <option value="">Sin autor</option>
+        </select>
+
+        <label for="sbCantidadPaginas">Cantidad de Páginas:</label>
+        <input type="number" id="sbCantidadPaginas" name="sbCantidadPaginas" disabled required>
+
+        <label for="dtFechaCreacion">Fecha de Creación:</label>
+        <input type="datetime-local" id="dtFechaCreacion" name="dtFechaCreacion" disabled required>
+
+        <label for="txtPrecio">Precio:</label>
+        <input type="number" id="txtPrecio" name="txtPrecio" disabled required>
+
+        <label for="tapaDura">Tapa Dura:</label>
+      <select id="tapaDura" name="tapaDura" required>
+        <option value="true">Sí</option>
+        <option value="false">No</option>
+      </select>
+
+        <button type="submit">Actualizar</button>
+      </form>
+    </div>
+  </div>
+</body>
+</html>

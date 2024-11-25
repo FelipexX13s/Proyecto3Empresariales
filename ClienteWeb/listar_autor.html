@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Listar Autores</title>
+    <style>
+        body {
+            font-family: 'Arial Rounded MT Bold', sans-serif;
+            margin: 0;
+            padding: 20px;
+            background-color: #f4f4f4;
+        }
+        .container {
+            width: 650px;
+            margin: auto;
+            background-color: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+        .table-container {
+            width: 100%;
+            overflow-x: auto;
+            margin-bottom: 20px;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 10px;
+        }
+        th, td {
+            padding: 12px;
+            text-align: left;
+            border: 1px solid #ddd;
+        }
+        th {
+            background-color: #f2f2f2;
+        }
+        .form-group {
+            display: inline-block;
+            margin-right: 15px;
+            margin-bottom: 10px;
+        }
+        .form-group label {
+            font-size: 12px;
+        }
+        .form-group input, .form-group button {
+            padding: 8px;
+            font-size: 14px;
+            width: 150px;
+        }
+        .form-group input[type="number"] {
+            width: 100px;
+        }
+        button {
+            background-color: #007bff;
+            color: white;
+            border: none;
+            cursor: pointer;
+            width: 160px;
+        }
+        button:hover {
+            background-color: #0056b3;
+        }
+        .filter-btns {
+            margin-top: 20px;
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+        }
+        .filter-btns .form-group {
+            margin-right: 0;
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Listar Autores</h1>
+
+        <div class="table-container">
+            <table id="authorsTable">
+                <thead>
+                    <tr>
+                        <th>Nombre</th>
+                        <th>Edad</th>
+                        <th>Nacionalidad</th>
+                        <th>Regalias</th>
+                        <th>Fecha de Nacimiento</th>
+                    </tr>
+                </thead>
+                <tbody>
+                </tbody>
+            </table>
+        </div>
+
+        <div class="filter-btns">
+            <div class="form-group">
+                <label for="txtAutor">Nacionalidad:</label>
+                <input type="text" id="txtAutor" placeholder="Ingrese Nacionalidad">
+                <button onclick="filterByNacionalidad()">Filtrar</button>
+            </div>
+
+            <div class="form-group">
+                <label for="spinBox">Edad:</label>
+                <input type="number" id="spinBox" min="1" max="100" placeholder="Edad">
+                <button onclick="filterByEdad()">Filtrar</button>
+            </div>
+
+            <div class="form-group">
+                <button onclick="listar()">Listar</button>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        const BaseUrl = "http://localhost:8090";
+
+        function renderTable(authorsList) {
+            const tableBody = document.querySelector("#authorsTable tbody");
+            tableBody.innerHTML = "";
+
+            authorsList.forEach(author => {
+                const row = document.createElement("tr");
+                row.innerHTML = `
+                    <td>${author.nombre}</td>
+                    <td>${author.edad}</td>
+                    <td>${author.nacionalidad}</td>
+                    <td>${author.regalias}%</td>
+                    <td>${author.fechaNacimiento}</td>
+                `;
+                tableBody.appendChild(row);
+            });
+        }
+
+        function listar() {
+            fetch(`${BaseUrl}/autores`)
+                .then(response => {
+                    if (!response.ok) {
+                        throw new Error('Error al obtener los datos de los autores');
+                    }
+                    return response.json();
+                })
+                .then(authors => renderTable(authors))
+                .catch(error => alert("Error: " + error.message));
+        }
+
+        function filterByNacionalidad() {
+            const nacionalidad = document.getElementById("txtAutor").value.toLowerCase();
+
+            fetch(`${BaseUrl}/autores/nacionalidad/${nacionalidad}`)
+                .then(response => {
+                    if (!response.ok) {
+                        throw new Error('Error al filtrar por nacionalidad');
+                    }
+                    return response.json();
+                })
+                .then(authors => renderTable(authors))
+                .catch(error => alert("Error: " + error.message));
+        }
+
+        function filterByEdad() {
+            const edad = document.getElementById("spinBox").value;
+
+            fetch(`${BaseUrl}/autores/edad/${edad}`)
+                .then(response => {
+                    if (!response.ok) {
+                        throw new Error('Error al filtrar por edad');
+                    }
+                    return response.json();
+                })
+                .then(authors => renderTable(authors))
+                .catch(error => alert("Error: " + error.message));
+        }
+    </script>
+</body>
+</html>

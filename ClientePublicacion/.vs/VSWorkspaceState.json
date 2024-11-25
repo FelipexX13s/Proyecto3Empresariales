@@ -5,6 +5,6 @@
     "\\Cliente\\Cliente",
     "\\Cliente\\Cliente\\Service"
   ],
-  "SelectedNode": "\\Cliente\\Cliente\\GUIBuscarAutor.cs",
+  "SelectedNode": "\\Cliente\\Cliente\\Service\\ServicioAutor.cs",
   "PreviewInSolutionExplorer": false
 }

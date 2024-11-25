@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Listar Libros</title>
+    <style>
+        body {
+            font-family: 'Arial Rounded MT Bold', sans-serif;
+            margin: 0;
+            padding: 20px;
+            background-color: #f4f4f4;
+        }
+        .container {
+            width: 750px;
+            margin: auto;
+            background-color: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+        .table-container {
+            width: 100%;
+            overflow-x: auto;
+            margin-bottom: 20px;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 10px;
+        }
+        th, td {
+            padding: 12px;
+            text-align: left;
+            border: 1px solid #ddd;
+        }
+        th {
+            background-color: #f2f2f2;
+        }
+        .form-group {
+            display: inline-block;
+            margin-right: 15px;
+            margin-bottom: 10px;
+        }
+        .form-group label {
+            font-size: 12px;
+        }
+        .form-group input, .form-group button {
+            padding: 8px;
+            font-size: 14px;
+            width: 150px;
+        }
+        button {
+            background-color: #007bff;
+            color: white;
+            border: none;
+            cursor: pointer;
+            width: 160px;
+        }
+        button:hover {
+            background-color: #0056b3;
+        }
+        .filter-btns {
+            margin-top: 20px;
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+        }
+        .filter-btns .form-group {
+            margin-right: 0;
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Listar Libros</h1>
+
+        <div class="table-container">
+            <table id="librosTable">
+                <thead>
+                    <tr>
+                        <th>Título</th>
+                        <th>Autor</th>
+                        <th>Páginas</th>
+                        <th>Fecha Creación</th>
+                        <th>Precio</th>
+                        <th>Tapa Dura</th>
+                    </tr>
+                </thead>
+                <tbody>
+                </tbody>
+            </table>
+        </div>
+
+        <div class="filter-btns">
+            <div class="form-group">
+                <label for="txtAutor">Autor:</label>
+                <input type="text" id="txtAutor" placeholder="Ingrese Autor">
+                <button onclick="filterByAutor()">Filtrar por Autor</button>
+            </div>
+
+            <div class="form-group">
+                <label for="tapaDura">Tapa Dura:</label>
+                <select id="tapaDura">
+                    <option value="true">Sí</option>
+                    <option value="false">No</option>
+                </select>
+                <button onclick="filterByTapaDura()">Filtrar por Tapa</button>
+            </div>
+
+            <div class="form-group">
+                <button onclick="listar()">Listar</button>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        const BaseUrl = "http://localhost:8090";
+
+        function renderTable(librosList) {
+            const tableBody = document.querySelector("#librosTable tbody");
+            tableBody.innerHTML = "";
+
+            librosList.forEach(libro => {
+                const row = document.createElement("tr");
+                row.innerHTML = `
+                    <td>${libro.titulo}</td>
+                    <td>${libro.autor || 'Sin Autor'}</td>
+                    <td>${libro.cantidadPaginas}</td>
+                    <td>${libro.fechaCreacion}</td>
+                    <td>$${libro.precio.toFixed(2)}</td>
+                    <td>${libro.tapaDura ? 'Sí' : 'No'}</td>
+                `;
+                tableBody.appendChild(row);
+            });
+        }
+
+        function listar() {
+            fetch(`${BaseUrl}/libros`)
+                .then(response => {
+                    if (!response.ok) {
+                        throw new Error('Error al obtener los libros');
+                    }
+                    return response.json();
+                })
+                .then(libros => renderTable(libros))
+                .catch(error => alert("Error: " + error.message));
+        }
+
+        function filterByAutor() {
+            const autor = document.getElementById("txtAutor").value;
+
+            fetch(`${BaseUrl}/libros/autor/${autor}`)
+                .then(response => {
+                    if (!response.ok) {
+                        throw new Error('Error al filtrar por autor');
+                    }
+                    return response.json();
+                })
+                .then(libros => renderTable(libros))
+                .catch(error => alert("Error: " + error.message));
+        }
+
+        function filterByTapaDura() {
+            const tapaDura = document.getElementById("tapaDura").value;
+
+            fetch(`${BaseUrl}/libros/tapa/${tapaDura}`)
+                .then(response => {
+                    if (!response.ok) {
+                        throw new Error('Error al filtrar por tapa dura');
+                    }
+                    return response.json();
+                })
+                .then(libros => renderTable(libros))
+                .catch(error => alert("Error: " + error.message));
+        }
+    </script>
+</body>
+</html>

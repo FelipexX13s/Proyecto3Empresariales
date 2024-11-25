@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Menú con Submenús</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f4f4f9;
+    }
+    nav {
+      background-color: #333;
+      color: white;
+      padding: 10px 0;
+    }
+    ul {
+      list-style-type: none;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      justify-content: center;
+    }
+    li {
+      position: relative;
+    }
+    li a {
+      display: block;
+      color: white;
+      text-decoration: none;
+      padding: 10px 15px;
+      background-color: #333;
+      text-align: center;
+    }
+    li a:hover {
+      background-color: #007BFF;
+    }
+    ul ul {
+      display: none;
+      position: absolute;
+      top: 100%;
+      left: 0;
+      background-color: #444;
+      min-width: 200px;
+      border: 1px solid #555;
+      z-index: 1000;
+    }
+    li:hover > ul {
+      display: block;
+    }
+    ul ul li a {
+      padding: 10px;
+      background-color: #444;
+      color: white;
+    }
+    ul ul li a:hover {
+      background-color: #0056b3;
+    }
+    ul ul ul {
+      left: 100%;
+      top: 0;
+    }
+    .image-container {
+      text-align: center;
+      margin-top: 20px;
+    }
+    .image-container img {
+      width: 25%;
+      height: auto;
+      border-radius: 8px;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    }
+  </style>
+  <script>
+    function mostrarDesarrolladores() {
+      alert(
+        "Desarrollado por:\n\n" +
+        "Juan Felipe Rodriguez Barbosa\n" +
+        "Cod.2220221045\n" +
+        "Juan Esteban Rodriguez Castellanos\n" +
+        "Cod.2220221063\n\n" +
+        "Desarrollo de Aplicaciones Empresariales\n" +
+        "Version 2.0"
+      );
+    }
+  </script>
+</head>
+<body>
+  <nav>
+    <ul>
+      <li>
+        <a href="#" target="_blank">Archivo</a>
+        <ul>
+          <li><a href="/cerrar" target="_blank">Cerrar</a></li>
+        </ul>
+      </li>
+      <li>
+        <a href="#" target="_blank">Libro</a>
+        <ul>
+          <li><a href="/registrar_libro.html" target="_blank">Crear</a></li>
+          <li><a href="/buscar_libro.html" target="_blank">Buscar</a></li>
+          <li><a href="/actualizar_libro.html" target="_blank">Actualizar</a></li>
+          <li><a href="/eliminar_libro.html" target="_blank">Eliminar</a></li>
+          <li><a href="/listar_libro.html" target="_blank">Listar todos</a></li>
+        </ul>
+      </li>
+      <li>
+        <a href="#" target="_blank">Autor</a>
+        <ul>
+          <li><a href="/registrar_autor.html" target="_blank">Registrar</a></li>
+          <li><a href="/buscar_autor.html" target="_blank">Buscar</a></li>
+          <li><a href="/actualizar_autor.html" target="_blank">Actualizar</a></li>
+          <li><a href="/eliminar_autor.html" target="_blank">Eliminar</a></li>
+          <li><a href="/listar_autor.html" target="_blank">Listar todos</a></li>
+        </ul>
+      </li>
+      <li>
+        <a>Acerca de</a>
+        <ul>
+          <li><a href="#" onclick="mostrarDesarrolladores()">Desarrolladores</a></li>
+        </ul>
+      </li>
+    </ul>      
+  </nav>
+  <div class="image-container">
+    <img src="logoPublicacion.png" alt="Descripción de la imagen">
+  </div>
+</body>
+</html>

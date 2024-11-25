@@ -15,6 +15,7 @@ import java.util.List;
 
 @RestController
 @RequestMapping(value = "/libros")
+@CrossOrigin(origins = "http://127.0.0.1:5500", allowCredentials = "true")
 public class ControllerLibro {
 
     @Autowired
@@ -65,8 +66,6 @@ public class ControllerLibro {
         return librosDTO.isEmpty() ?
                 ResponseEntity.noContent().build() : ResponseEntity.ok(librosDTO);
     }
-
-
 
     @PostMapping("/agregar")
     public ResponseEntity<String> agregarLibro(@RequestBody Libro libro) {

@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registrar Autor</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            background-color: #f4f4f9;
+        }
+        .container {
+            max-width: 400px;
+            margin: auto;
+            padding: 20px;
+            background-color: white;
+            border: 1px solid #ccc;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+        }
+        h1 {
+            text-align: center;
+            font-size: 1.5rem;
+            margin-bottom: 20px;
+        }
+        label {
+            font-weight: bold;
+            display: block;
+            margin-bottom: 5px;
+        }
+        input, select, button {
+            width: 100%;
+            padding: 8px;
+            margin-bottom: 15px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+        button {
+            background-color: #007BFF;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #0056b3;
+        }
+        .error {
+            color: red;
+            font-size: 0.9em;
+            margin-top: -10px;
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Registrar Autor</h1>
+        <form id="formAutor" onsubmit="event.preventDefault(); registrar();">
+            <label for="nombre">Nombre:</label>
+            <input type="text" id="nombre" name="nombre" required>
+
+            <label for="edad">Edad:</label>
+            <input type="number" id="edad" name="edad" min="1" max="150" required>
+
+            <label for="nacionalidad">Nacionalidad:</label>
+            <input type="text" id="nacionalidad" name="nacionalidad" required>
+
+            <label for="regalias">Porcentaje de Regalías:</label>
+            <input type="number" id="regalias" name="regalias" min="0" max="100" step="0.1" required>
+
+            <label for="fechaNacimiento">Fecha de Nacimiento:</label>
+            <input type="datetime-local" id="fechaNacimiento" name="fechaNacimiento" required>
+
+            <button type="submit">Agregar</button>
+        </form>
+    </div>
+
+    <script>
+        async function registrar() {
+            try {
+                const fechaInput = document.getElementById("fechaNacimiento").value;
+                const fecha = new Date(fechaInput);
+                
+                const autor = {
+                    nombre: document.getElementById("nombre").value,
+                    edad: parseInt(document.getElementById("edad").value),
+                    nacionalidad: document.getElementById("nacionalidad").value,
+                    regalias: parseFloat(document.getElementById("regalias").value),
+                    fechaNacimiento: fecha.toISOString(),
+                    libros: []
+                };
+
+                const response = await fetch('http://localhost:8090/autores/agregar', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                    },
+                    body: JSON.stringify(autor)
+                });
+
+                const responseData = await response.text();
+
+                if (!response.ok) {
+                    throw new Error(responseData || `Error ${response.status}: ${response.statusText}`);
+                }
+
+                alert('Autor registrado exitosamente');
+                document.getElementById("formAutor").reset();
+                
+            } catch (error) {
+                console.error('Error completo:', error);
+                alert('Error al registrar: ' + error.message);
+            }
+        }
+
+        const fechaInput = document.getElementById("fechaNacimiento");
+        const hoy = new Date();
+        hoy.setMinutes(hoy.getMinutes() - hoy.getTimezoneOffset());
+        fechaInput.max = hoy.toISOString().slice(0, 16);
+    </script>
+</body>
+</html>

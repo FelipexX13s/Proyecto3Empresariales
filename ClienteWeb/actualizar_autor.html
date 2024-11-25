@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Buscar Autor</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f4f4f9;
+      margin: 0;
+      padding: 20px;
+    }
+    .container {
+      max-width: 500px;
+      margin: 0 auto;
+      padding: 20px;
+      background-color: #fff;
+      border: 1px solid #ddd;
+      border-radius: 8px;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    }
+    h1 {
+      text-align: center;
+      margin-bottom: 20px;
+    }
+    label {
+      font-weight: bold;
+      display: block;
+      margin-top: 10px;
+    }
+    input[type="text"], input[type="number"], input[type="datetime-local"], button {
+      width: 100%;
+      padding: 10px;
+      margin-top: 5px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+    }
+    button {
+      background-color: #007BFF;
+      color: white;
+      border: none;
+      cursor: pointer;
+      margin-top: 15px;
+    }
+    button:hover {
+      background-color: #0056b3;
+    }
+    .resultado {
+      margin-top: 20px;
+    }
+    .resultado h2 {
+      margin-bottom: 20px;
+      font-size: 1.2rem;
+      text-align: center;
+    }
+  </style>
+  <script>
+    const BaseUrl = "http://localhost:8090";
+
+    function buscar() {
+      const nombre = document.getElementById("lineEdit").value;
+
+      fetch(`${BaseUrl}/autores/buscar/${nombre}`, {
+        method: 'GET',
+        headers: {
+          'Accept': 'application/json',
+          'Content-Type': 'application/json'
+        },
+        mode: 'cors',
+        credentials: 'include'
+      })
+        .then(response => {
+          if (!response.ok) {
+            throw new Error('Autor no encontrado');
+          }
+          return response.json();
+        })
+        .then(autor => {
+          document.getElementById("txtNombre").value = autor.nombre;
+          document.getElementById("sbEdad").value = autor.edad;
+          document.getElementById("txtNacionalidad").value = autor.nacionalidad;
+          document.getElementById("sbRegalias").value = autor.regalias;
+          document.getElementById("dtFechaNacimiento").value = autor.fechaNacimiento 
+            ? new Date(autor.fechaNacimiento).toISOString().slice(0, 16) 
+            : '';
+          habilitarCampos();
+        })
+        .catch(error => {
+          alert(error.message);
+        });
+    }
+
+    function habilitarCampos() {
+      document.getElementById("txtNombre").disabled = false;
+      document.getElementById("sbEdad").disabled = false;
+      document.getElementById("txtNacionalidad").disabled = false;
+      document.getElementById("sbRegalias").disabled = false;
+      document.getElementById("dtFechaNacimiento").disabled = false;
+    }
+
+    function actualizar() {
+      const nombreAntiguo = document.getElementById("lineEdit").value;
+      const nombrex = document.getElementById("txtNombre").value;
+      const edadx = parseInt(document.getElementById("sbEdad").value, 10);
+      const nacionalidadx = document.getElementById("txtNacionalidad").value;
+      const porcentajeRegaliasx = parseFloat(document.getElementById("sbRegalias").value);
+      const fechaNacimientox = document.getElementById("dtFechaNacimiento").value;
+
+      if (!nombrex || !edadx || !nacionalidadx || !porcentajeRegaliasx || !fechaNacimientox) {
+        alert('Por favor complete todos los campos');
+        return;
+      }
+
+      const autorData = {
+        nombre: nombrex,
+        edad: edadx,
+        nacionalidad: nacionalidadx,
+        regalias: porcentajeRegaliasx,
+        fechaNacimiento: new Date(fechaNacimientox).toISOString() // Convertir a ISO string
+      };
+
+      fetch(`${BaseUrl}/autores/actualizar/${nombreAntiguo}`, {
+        method: 'PUT',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(autorData),
+      })
+        .then(response => {
+          if (!response.ok) {
+            return response.text().then(text => {
+              throw new Error(text || 'Error al actualizar el autor');
+            });
+          }
+          alert('Autor actualizado con éxito');
+        })
+        .catch(error => {
+          alert(`Error: ${error.message}`);
+        });
+    }
+
+    document.addEventListener("DOMContentLoaded", () => {
+      document.querySelector(".resultado form").onsubmit = function (event) {
+        event.preventDefault();
+        actualizar();
+      };
+    });
+  </script>
+</head>
+<body>
+  <div class="container">
+    <h1>Actualizar Autor</h1>
+    <form id="formBuscarAutor" onsubmit="event.preventDefault(); buscar();">
+      <label for="lineEdit">Autor a buscar:</label>
+      <input type="text" id="lineEdit" name="lineEdit" placeholder="Ingrese el nombre del autor" required>
+      <button type="submit">Buscar</button>
+    </form>
+
+    <div class="resultado">
+      <h2>Autor encontrado</h2>
+      <form>
+        <label for="txtNombre">Nombre:</label>
+        <input type="text" id="txtNombre" name="txtNombre" disabled required>
+
+        <label for="sbEdad">Edad:</label>
+        <input type="number" id="sbEdad" name="sbEdad" disabled required>
+
+        <label for="txtNacionalidad">Nacionalidad:</label>
+        <input type="text" id="txtNacionalidad" name="txtNacionalidad" disabled required>
+
+        <label for="sbRegalias">Porcentaje de Regalías:</label>
+        <input type="number" id="sbRegalias" name="sbRegalias" step="0.1" disabled required>
+
+        <label for="dtFechaNacimiento">Fecha de Nacimiento:</label>
+        <input type="datetime-local" id="dtFechaNacimiento" name="dtFechaNacimiento" disabled required>
+
+        <button type="submit">Actualizar</button>
+      </form>
+    </div>
+  </div>
+</body>
+</html>
